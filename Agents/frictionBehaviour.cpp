@@ -1,8 +1,6 @@
 #include "frictionBehaviour.h"
 #include "GameObject.h"
 
-
-
 frictionBehaviour::frictionBehaviour()
 {
 }
