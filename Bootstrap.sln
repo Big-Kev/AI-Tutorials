@@ -23,6 +23,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agents", "Agents\Agents.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MathLib", "MathLib\MathLib.vcxproj", "{899DF1EF-E313-4D2D-B191-6AA87554D2A0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tutorial - Finite State Machines", "Tutorial - Finite State Machines\Tutorial - Finite State Machines.vcxproj", "{85F6AE7A-4C49-48AB-B0A8-B3CEE69BD163}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AF59BB0B-E059-4773-83DC-728A949647DA} = {AF59BB0B-E059-4773-83DC-728A949647DA}
+		{899DF1EF-E313-4D2D-B191-6AA87554D2A0} = {899DF1EF-E313-4D2D-B191-6AA87554D2A0}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +77,14 @@ Global
 		{899DF1EF-E313-4D2D-B191-6AA87554D2A0}.Release|x64.Build.0 = Release|x64
 		{899DF1EF-E313-4D2D-B191-6AA87554D2A0}.Release|x86.ActiveCfg = Release|Win32
 		{899DF1EF-E313-4D2D-B191-6AA87554D2A0}.Release|x86.Build.0 = Release|Win32
+		{85F6AE7A-4C49-48AB-B0A8-B3CEE69BD163}.Debug|x64.ActiveCfg = Debug|x64
+		{85F6AE7A-4C49-48AB-B0A8-B3CEE69BD163}.Debug|x64.Build.0 = Debug|x64
+		{85F6AE7A-4C49-48AB-B0A8-B3CEE69BD163}.Debug|x86.ActiveCfg = Debug|Win32
+		{85F6AE7A-4C49-48AB-B0A8-B3CEE69BD163}.Debug|x86.Build.0 = Debug|Win32
+		{85F6AE7A-4C49-48AB-B0A8-B3CEE69BD163}.Release|x64.ActiveCfg = Release|x64
+		{85F6AE7A-4C49-48AB-B0A8-B3CEE69BD163}.Release|x64.Build.0 = Release|x64
+		{85F6AE7A-4C49-48AB-B0A8-B3CEE69BD163}.Release|x86.ActiveCfg = Release|Win32
+		{85F6AE7A-4C49-48AB-B0A8-B3CEE69BD163}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

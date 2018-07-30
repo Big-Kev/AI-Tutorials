@@ -31,8 +31,6 @@ eBehaviourResult frictionBehaviour::execute(GameObject * gameObject, float delta
 	test.y = 0 - m_temp.y;
 	float m;
 	gameObject->getMass(m);
-	//gameObject->addForce(test, m_speed);
-	//gameObject->addForce(test, s);
 	return eBehaviourResult::SUCCESS;
 
 }
