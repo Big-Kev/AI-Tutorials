@@ -1,11 +1,11 @@
 #pragma once
-
 #include "Application.h"
 #include "Renderer2D.h"
 #include "GameObject.h"
 #include "FollowBehaviour.h"
 #include "KeyboardBehaviour.h"
 #include "frictionBehaviour.h"
+
 class AgentsApp : public aie::Application {
 public:
 
