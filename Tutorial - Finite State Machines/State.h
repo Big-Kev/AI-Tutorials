@@ -13,11 +13,11 @@ public:
 	virtual void init(GameObject* gameObject) {};
 	virtual void exit(GameObject* gameObject) {};
 
-	void addTransition(Transition* transition) { m_transition.push_back(transition); }
+	void addTransition(Transition* transition) { m_transitions.push_back(transition); }
 
-	Transition* getTriggerdTransition(GameObject * gameObject);
+	Transition* getTriggeredTransition(GameObject * gameObject);
 
 protected:
-	std::vector<Transition*> m_transition;
+	std::vector<Transition*> m_transitions;
 };
 

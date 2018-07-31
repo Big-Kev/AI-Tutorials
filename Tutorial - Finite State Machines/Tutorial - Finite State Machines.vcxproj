@@ -165,6 +165,7 @@
     <ClCompile Include="Agent.cpp" />
     <ClCompile Include="Behaviour.cpp" />
     <ClCompile Include="Condition.cpp" />
+    <ClCompile Include="FiniteStateMachine.cpp" />
     <ClCompile Include="FollowBehaviour.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="KeyboardBehaviour.cpp" />
@@ -172,17 +173,20 @@
     <ClCompile Include="Transition.cpp" />
     <ClCompile Include="Tutorial___Finite_State_MachinesApp.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="WithinRangeCondition.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h" />
     <ClInclude Include="Behaviour.h" />
     <ClInclude Include="Condition.h" />
+    <ClInclude Include="FiniteStateMachine.h" />
     <ClInclude Include="FollowBehaviour.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="KeyboardBehaviour.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="Transition.h" />
     <ClInclude Include="Tutorial___Finite_State_MachinesApp.h" />
+    <ClInclude Include="WithinRangeCondition.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

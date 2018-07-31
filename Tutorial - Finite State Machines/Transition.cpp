@@ -2,11 +2,3 @@
 
 
 
-Transition::Transition()
-{
-}
-
-
-Transition::~Transition()
-{
-}
