@@ -7,12 +7,12 @@ public:
 	SteeringForce();
 	virtual ~SteeringForce();
 
-	Vector2 getForce(GameObject* gameObject) 
-	{
-		Vector2 v(0, 0);
-		gameObject->getForce(v);
-		return v;
-	}
+	virtual Vector2 getForce(GameObject* gameObject) = 0;
+//	{
+//		Vector2 v(0, 0);
+//		gameObject->getForce(v);
+//		return v;
+//	}
 
 };
 

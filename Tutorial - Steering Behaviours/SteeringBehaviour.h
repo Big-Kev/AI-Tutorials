@@ -11,6 +11,7 @@ public:
 
 	virtual eBehaviourResult execute(GameObject* gameObject, float deltaTime);
 
+	void setSteeringForce(SteeringForce* sf) { steeringForce = sf; }
 protected:
 	SteeringForce* steeringForce;
 };

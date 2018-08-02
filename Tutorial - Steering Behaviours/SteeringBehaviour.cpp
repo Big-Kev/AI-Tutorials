@@ -13,7 +13,8 @@ SteeringBehaviour::~SteeringBehaviour()
 
 eBehaviourResult SteeringBehaviour::execute(GameObject * gameObject, float deltaTime)
 {
-	gameObject->addForce(steeringForce->getForce(gameObject));
+	Vector2 v = steeringForce->getForce(gameObject);
+	gameObject->addForce(v);
 
 	return eBehaviourResult::SUCCESS;
 }

@@ -2,7 +2,10 @@
 
 #include "Application.h"
 #include "Renderer2D.h"
-
+#include "GameObject.h"
+#include "KeyboardBehaviour.h"
+#include "SteeringBehaviour.h"
+#include "SeekForce.h"
 class Tutorial___Steering_BehavioursApp : public aie::Application {
 public:
 
@@ -19,4 +22,15 @@ protected:
 
 	aie::Renderer2D*	m_2dRenderer;
 	aie::Font*			m_font;
+
+
+	GameObject			m_player;
+	KeyboardBehaviour	m_playerBehaviour;
+
+	GameObject			m_enemy;
+	SteeringBehaviour	m_enemyBehaviour;
+	SeekForce			m_seekPlayerBehaviour;
+
+	Vector2				m_playerImage;
+	Vector2				m_enemyImage;
 };
