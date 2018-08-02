@@ -21,7 +21,7 @@ bool Tutorial___Steering_BehavioursApp::startup() {
 	
 
 
-	m_player.setSpeed(2);
+	m_player.setSpeed(4);
 	m_player.addBehaviour(&m_playerBehaviour);
 	m_player.setPosition(Vector2(500, 500));
 
@@ -68,10 +68,11 @@ void Tutorial___Steering_BehavioursApp::draw() {
 	m_player.getPosition(m_playerImage); m_2dRenderer->setRenderColour(0, 0, 1); m_2dRenderer->drawCircle(m_playerImage.x, m_playerImage.y, 10);
 	m_enemy.getPosition(m_enemyImage); m_2dRenderer->setRenderColour(1, 0, 0); m_2dRenderer->drawCircle(m_enemyImage.x, m_enemyImage.y, 10);
 	m_2dRenderer->setRenderColour(1, 0, 0, 0.4f); //m_2dRenderer->drawCircle(m_enemyImage.x, m_enemyImage.y, 200);
-	Vector2 testdiff(m_playerImage - m_enemyImage);
-	testdiff.normalise();
-	testdiff = testdiff * 200;
-	m_2dRenderer->drawLine(m_enemyImage.x, m_enemyImage.y, m_enemyImage.x + testdiff.x, m_enemyImage.y + testdiff.y, 1.0f, 1);
+	Vector2 testVelocity;
+	m_enemy.getVelocity(testVelocity);
+	testVelocity = testVelocity * 2000;
+	m_2dRenderer->drawLine(m_enemyImage.x, m_enemyImage.y, m_enemyImage.x + testVelocity.x, m_enemyImage.y + testVelocity.y, 1.0f, 1);
+	
 
 
 	// output some text, uses the last used colour
