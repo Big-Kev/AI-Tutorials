@@ -171,7 +171,10 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="IdleState.cpp" />
     <ClCompile Include="KeyboardBehaviour.cpp" />
+    <ClCompile Include="SeekForce.cpp" />
     <ClCompile Include="State.cpp" />
+    <ClCompile Include="SteeringBehaviour.cpp" />
+    <ClCompile Include="SteeringForce.cpp" />
     <ClCompile Include="Transition.cpp" />
     <ClCompile Include="Tutorial___Steering_BehavioursApp.cpp" />
     <ClCompile Include="main.cpp" />
@@ -187,7 +190,10 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="IdleState.h" />
     <ClInclude Include="KeyboardBehaviour.h" />
+    <ClInclude Include="SeekForce.h" />
     <ClInclude Include="State.h" />
+    <ClInclude Include="SteeringBehaviour.h" />
+    <ClInclude Include="SteeringForce.h" />
     <ClInclude Include="Transition.h" />
     <ClInclude Include="Tutorial___Steering_BehavioursApp.h" />
     <ClInclude Include="WithinRangeCondition.h" />

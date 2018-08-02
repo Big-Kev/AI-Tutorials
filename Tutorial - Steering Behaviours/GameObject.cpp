@@ -45,9 +45,9 @@ void GameObject::update(float deltaTime)
 	m_velocity = m_velocity + m_acceleration;
 	
 	if (m_velocity.x != 0 || m_velocity.y != 0) {
-		if (m_velocity.magnitude() > m_speed) {
+		if (m_velocity.magnitude() > m_maxVelocity) {
 			m_velocity.normalise();
-			m_velocity * m_speed;
+			m_velocity * m_maxVelocity;
 		}
 	}
 

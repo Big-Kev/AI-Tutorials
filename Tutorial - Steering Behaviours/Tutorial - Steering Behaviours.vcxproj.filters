@@ -27,9 +27,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Agent.cpp">
-      <Filter>Source Files\Prev Tut Files</Filter>
-    </ClCompile>
     <ClCompile Include="AttackState.cpp">
       <Filter>Source Files\Prev Tut Files</Filter>
     </ClCompile>
@@ -43,9 +40,6 @@
       <Filter>Source Files\Prev Tut Files</Filter>
     </ClCompile>
     <ClCompile Include="FollowBehaviour.cpp">
-      <Filter>Source Files\Prev Tut Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObject.cpp">
       <Filter>Source Files\Prev Tut Files</Filter>
     </ClCompile>
     <ClCompile Include="IdleState.cpp">
@@ -63,13 +57,25 @@
     <ClCompile Include="WithinRangeCondition.cpp">
       <Filter>Source Files\Prev Tut Files</Filter>
     </ClCompile>
+    <ClCompile Include="Agent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SteeringForce.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SteeringBehaviour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SeekForce.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tutorial___Steering_BehavioursApp.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Agent.h">
-      <Filter>Header Files\Prev Tut Files</Filter>
     </ClInclude>
     <ClInclude Include="AttackState.h">
       <Filter>Header Files\Prev Tut Files</Filter>
@@ -86,9 +92,6 @@
     <ClInclude Include="FollowBehaviour.h">
       <Filter>Header Files\Prev Tut Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Header Files\Prev Tut Files</Filter>
-    </ClInclude>
     <ClInclude Include="IdleState.h">
       <Filter>Header Files\Prev Tut Files</Filter>
     </ClInclude>
@@ -103,6 +106,21 @@
     </ClInclude>
     <ClInclude Include="WithinRangeCondition.h">
       <Filter>Header Files\Prev Tut Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Agent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SteeringForce.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SteeringBehaviour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SeekForce.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

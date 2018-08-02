@@ -23,9 +23,11 @@ public:
 	void setVelocity(Vector2 m_vec) { m_velocity.x = m_vec.x; m_velocity.y = m_vec.y; }
 	void getAcceleration(float& a, float& b) const { a = m_acceleration.x; b = m_acceleration.x; }
 	void getMass(float& m) const { m = m_mass; }
-	void getSpeed(float& s) const { s = m_speed; }
-	void setSpeed(float s){ m_speed = s; }
+	void getSpeed(float& s) const { s = m_maxVelocity; }
+	void setSpeed(float s){ m_maxVelocity = s; }
 
+	void getForce(Vector2& m_vec) { m_vec = m_acceleration;  }
+	
 	//update physics
 	void addForce(Vector2 dir, float f, float deltaTime);
 	void addForce(Vector2 dir);
@@ -44,7 +46,9 @@ protected:
 	Vector2 m_acceleration;
 	float m_force;
 	float m_mass;
-	float m_speed;
+	float m_maxVelocity;
+	float m_maxForce;
+
 
 	std::vector<Behaviour*> m_behaviours;
 };
