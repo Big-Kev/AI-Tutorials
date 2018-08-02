@@ -162,11 +162,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Agent.cpp" />
+    <ClCompile Include="AttackState.cpp" />
+    <ClCompile Include="Behaviour.cpp" />
+    <ClCompile Include="Condition.cpp" />
+    <ClCompile Include="FiniteStateMachine.cpp" />
+    <ClCompile Include="FollowBehaviour.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="IdleState.cpp" />
+    <ClCompile Include="KeyboardBehaviour.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="Transition.cpp" />
     <ClCompile Include="Tutorial___Steering_BehavioursApp.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="WithinRangeCondition.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Agent.h" />
+    <ClInclude Include="AttackState.h" />
+    <ClInclude Include="Behaviour.h" />
+    <ClInclude Include="Condition.h" />
+    <ClInclude Include="FiniteStateMachine.h" />
+    <ClInclude Include="FollowBehaviour.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="IdleState.h" />
+    <ClInclude Include="KeyboardBehaviour.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="Transition.h" />
     <ClInclude Include="Tutorial___Steering_BehavioursApp.h" />
+    <ClInclude Include="WithinRangeCondition.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
