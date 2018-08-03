@@ -19,6 +19,12 @@
     <Filter Include="Source Files\Prev Tut Files">
       <UniqueIdentifier>{1f4e3098-d069-4b5c-ae57-6bd0571478d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Steering Behaviours">
+      <UniqueIdentifier>{7cb2b3d6-bfce-453f-b19c-900418f524b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Steering Behaviours">
+      <UniqueIdentifier>{d1995598-46bc-4681-a79a-ed337efd9073}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tutorial___Steering_BehavioursApp.cpp">
@@ -69,11 +75,17 @@
     <ClCompile Include="SteeringBehaviour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SeekForce.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="FleeForce.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Steering Behaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="SeekForce.cpp">
+      <Filter>Source Files\Steering Behaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="PursueForce.cpp">
+      <Filter>Source Files\Steering Behaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="EvadeForce.cpp">
+      <Filter>Source Files\Steering Behaviours</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -122,11 +134,17 @@
     <ClInclude Include="SteeringBehaviour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SeekForce.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="FleeForce.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Steering Behaviours</Filter>
+    </ClInclude>
+    <ClInclude Include="SeekForce.h">
+      <Filter>Header Files\Steering Behaviours</Filter>
+    </ClInclude>
+    <ClInclude Include="PursueForce.h">
+      <Filter>Header Files\Steering Behaviours</Filter>
+    </ClInclude>
+    <ClInclude Include="EvadeForce.h">
+      <Filter>Header Files\Steering Behaviours</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

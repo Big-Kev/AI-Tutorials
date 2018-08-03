@@ -29,7 +29,9 @@ bool Tutorial___Steering_BehavioursApp::startup() {
 	m_enemy.setPosition(Vector2(100, 100));
 
 	//m_enemyBehaviour.setSteeringForce(&m_seekPlayerBehaviour);
-	m_enemyBehaviour.setSteeringForce(&m_fleePlayerBehaviour);
+	m_enemyBehaviour.setSteeringForce(&m_pursuePlayerBehaviour);
+	m_pursuePlayerBehaviour.m_target = &m_player;
+	
 	m_fleePlayerBehaviour.m_target = &m_player;
 	m_seekPlayerBehaviour.m_target = &m_player;
 	return true;
@@ -68,19 +70,19 @@ void Tutorial___Steering_BehavioursApp::draw() {
 
 	m_player.getPosition(m_playerImage); m_2dRenderer->setRenderColour(0, 0, 1); m_2dRenderer->drawCircle(m_playerImage.x, m_playerImage.y, 10);
 	m_enemy.getPosition(m_enemyImage); m_2dRenderer->setRenderColour(1, 0, 0); m_2dRenderer->drawCircle(m_enemyImage.x, m_enemyImage.y, 10);
-	m_2dRenderer->setRenderColour(1, 0, 0, 0.4f); //m_2dRenderer->drawCircle(m_enemyImage.x, m_enemyImage.y, 200);
+	m_2dRenderer->setRenderColour(1, 0, 0, 1); //m_2dRenderer->drawCircle(m_enemyImage.x, m_enemyImage.y, 200);
 	Vector2 testVelocity;
 	m_enemy.getVelocity(testVelocity);
-	testVelocity = testVelocity * 2000;
+	testVelocity = testVelocity * 20;
 	m_2dRenderer->drawLine(m_enemyImage.x, m_enemyImage.y, m_enemyImage.x + testVelocity.x, m_enemyImage.y + testVelocity.y, 1.0f, 1);
-
+	/*
 	if (((m_enemyImage.x - m_playerImage.x)* (m_enemyImage.x - m_playerImage.x) + (m_enemyImage.y - m_playerImage.y) * (m_enemyImage.y - m_playerImage.y)) > 200 * 200) {
 		m_enemyBehaviour.setSteeringForce(&m_seekPlayerBehaviour);
 	}
 	else {
 		m_enemyBehaviour.setSteeringForce(&m_fleePlayerBehaviour);
 	}
-
+	*/
 	// output some text, uses the last used colour
 	m_2dRenderer->drawText(m_font, "Press ESC to quit", 0, 0);
 
