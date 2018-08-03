@@ -99,3 +99,11 @@ void Vector2::shortenLength(float reductionLength)
 		data[1] *= (1 - reductionLength / t);
 	}
 }
+
+float Vector2::pythag(Vector2 rhs)
+{
+	float result;
+	result = ((x - rhs.x) * (x - rhs.x)) + ((y - rhs.y) * (y - rhs.y));
+
+	return result;//returns c^2
+}

@@ -32,6 +32,7 @@ public:
 	operator const float*();
 	float quicksum(Vector2 other);
 	void shortenLength(float reductionLength);
+	float pythag(Vector2 rhs);
 private:
 
 
