@@ -181,6 +181,7 @@
     <ClCompile Include="Transition.cpp" />
     <ClCompile Include="Tutorial___Steering_BehavioursApp.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="WanderForce.cpp" />
     <ClCompile Include="WithinRangeCondition.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -202,6 +203,7 @@
     <ClInclude Include="SteeringForce.h" />
     <ClInclude Include="Transition.h" />
     <ClInclude Include="Tutorial___Steering_BehavioursApp.h" />
+    <ClInclude Include="WanderForce.h" />
     <ClInclude Include="WithinRangeCondition.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

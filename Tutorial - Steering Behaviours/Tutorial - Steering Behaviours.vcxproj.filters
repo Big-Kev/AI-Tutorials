@@ -87,6 +87,9 @@
     <ClCompile Include="EvadeForce.cpp">
       <Filter>Source Files\Steering Behaviours</Filter>
     </ClCompile>
+    <ClCompile Include="WanderForce.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tutorial___Steering_BehavioursApp.h">
@@ -145,6 +148,9 @@
     </ClInclude>
     <ClInclude Include="EvadeForce.h">
       <Filter>Header Files\Steering Behaviours</Filter>
+    </ClInclude>
+    <ClInclude Include="WanderForce.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
