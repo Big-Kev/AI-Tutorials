@@ -15,9 +15,12 @@ Vector2 PursueForce::getForce(GameObject * gameObject)
 {
 	Vector2 target_pos;
 	Vector2 target_velocity;
+	Vector2 target_acc;
 	m_target->getPosition(target_pos);
 	m_target->getVelocity(target_velocity);
-	target_pos = target_pos + target_velocity;
+	m_target->getAcceleration(target_acc);
+	
+	target_pos = target_pos + (target_velocity + target_acc);
 
 	Vector2 pos;
 	gameObject->getPosition(pos);

@@ -19,9 +19,10 @@ public:
 
 	//physics functions
 	void getVelocity(float& a, float& b) const { a = m_velocity.x; b = m_velocity.x; }
-	void getVelocity(Vector2 m_vec) const { m_vec = m_velocity; }
+	void getVelocity(Vector2& m_vec) const { m_vec = m_velocity; }
 	void setVelocity(Vector2& m_vec) { m_velocity.x = m_vec.x; m_velocity.y = m_vec.y; }
 	void getAcceleration(float& a, float& b) const { a = m_acceleration.x; b = m_acceleration.x; }
+	void getAcceleration(Vector2& m_vec) const { m_vec = m_acceleration; }
 	void getMass(float& m) const { m = m_mass; }
 	void getSpeed(float& s) const { s = m_maxVelocity; }
 	void setSpeed(float s){ m_maxVelocity = s; }

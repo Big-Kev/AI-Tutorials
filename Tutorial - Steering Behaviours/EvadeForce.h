@@ -6,5 +6,8 @@ class EvadeForce :
 public:
 	EvadeForce();
 	~EvadeForce();
+	Vector2 getForce(GameObject* gameObject);
+
+	GameObject * m_target;
 };
 

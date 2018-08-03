@@ -69,11 +69,13 @@ void Tutorial___Steering_BehavioursApp::draw() {
 	// draw your stuff here!
 
 	m_player.getPosition(m_playerImage); m_2dRenderer->setRenderColour(0, 0, 1); m_2dRenderer->drawCircle(m_playerImage.x, m_playerImage.y, 10);
-	m_enemy.getPosition(m_enemyImage); m_2dRenderer->setRenderColour(1, 0, 0); m_2dRenderer->drawCircle(m_enemyImage.x, m_enemyImage.y, 10);
+	m_enemy.getPosition(m_enemyImage); m_2dRenderer->setRenderColour(1, 0, 0,0.4f); m_2dRenderer->drawCircle(m_enemyImage.x, m_enemyImage.y, 10);
 	m_2dRenderer->setRenderColour(1, 0, 0, 1); //m_2dRenderer->drawCircle(m_enemyImage.x, m_enemyImage.y, 200);
 	Vector2 testVelocity;
 	m_enemy.getVelocity(testVelocity);
-	testVelocity = testVelocity * 20;
+	testVelocity = testVelocity * 200;
+	//m_2dRenderer->drawLine(m_enemyImage.x, m_enemyImage.y, m_enemyImage.x + testVelocity.x, m_enemyImage.y + testVelocity.y, 1.0f, 1);
+	//m_2dRenderer->drawLine(m_enemyImage.x, m_enemyImage.y, m_playerImage.x, m_playerImage.y, 1.0f, 1);
 	m_2dRenderer->drawLine(m_enemyImage.x, m_enemyImage.y, m_enemyImage.x + testVelocity.x, m_enemyImage.y + testVelocity.y, 1.0f, 1);
 	/*
 	if (((m_enemyImage.x - m_playerImage.x)* (m_enemyImage.x - m_playerImage.x) + (m_enemyImage.y - m_playerImage.y) * (m_enemyImage.y - m_playerImage.y)) > 200 * 200) {
