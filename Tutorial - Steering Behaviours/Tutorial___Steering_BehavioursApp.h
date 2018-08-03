@@ -6,6 +6,7 @@
 #include "KeyboardBehaviour.h"
 #include "SteeringBehaviour.h"
 #include "SeekForce.h"
+#include "FleeForce.h"
 class Tutorial___Steering_BehavioursApp : public aie::Application {
 public:
 
@@ -30,7 +31,7 @@ protected:
 	GameObject			m_enemy;
 	SteeringBehaviour	m_enemyBehaviour;
 	SeekForce			m_seekPlayerBehaviour;
-
+	FleeForce			m_fleePlayerBehaviour;
 	Vector2				m_playerImage;
 	Vector2				m_enemyImage;
 };

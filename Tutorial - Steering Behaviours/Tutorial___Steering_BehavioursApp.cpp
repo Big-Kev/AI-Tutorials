@@ -12,24 +12,25 @@ Tutorial___Steering_BehavioursApp::~Tutorial___Steering_BehavioursApp() {
 }
 
 bool Tutorial___Steering_BehavioursApp::startup() {
-	
+
 	m_2dRenderer = new aie::Renderer2D();
 
 	// TODO: remember to change this when redistributing a build!
 	// the following path would be used instead: "./font/consolas.ttf"
 	m_font = new aie::Font("../bin/font/consolas.ttf", 32);
-	
+
 
 
 	m_player.setSpeed(4);
 	m_player.addBehaviour(&m_playerBehaviour);
-	m_player.setPosition(Vector2(500, 500));
+	m_player.setPosition(Vector2(50, 50));
 
 	m_enemy.addBehaviour(&m_enemyBehaviour);
 	m_enemy.setPosition(Vector2(100, 100));
 
-	m_enemyBehaviour.setSteeringForce(&m_seekPlayerBehaviour);
-
+	//m_enemyBehaviour.setSteeringForce(&m_seekPlayerBehaviour);
+	m_enemyBehaviour.setSteeringForce(&m_fleePlayerBehaviour);
+	m_fleePlayerBehaviour.m_target = &m_player;
 	m_seekPlayerBehaviour.m_target = &m_player;
 	return true;
 }
@@ -72,8 +73,13 @@ void Tutorial___Steering_BehavioursApp::draw() {
 	m_enemy.getVelocity(testVelocity);
 	testVelocity = testVelocity * 2000;
 	m_2dRenderer->drawLine(m_enemyImage.x, m_enemyImage.y, m_enemyImage.x + testVelocity.x, m_enemyImage.y + testVelocity.y, 1.0f, 1);
-	
 
+	if (((m_enemyImage.x - m_playerImage.x)* (m_enemyImage.x - m_playerImage.x) + (m_enemyImage.y - m_playerImage.y) * (m_enemyImage.y - m_playerImage.y)) > 200 * 200) {
+		m_enemyBehaviour.setSteeringForce(&m_seekPlayerBehaviour);
+	}
+	else {
+		m_enemyBehaviour.setSteeringForce(&m_fleePlayerBehaviour);
+	}
 
 	// output some text, uses the last used colour
 	m_2dRenderer->drawText(m_font, "Press ESC to quit", 0, 0);

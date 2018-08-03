@@ -167,6 +167,7 @@
     <ClCompile Include="Behaviour.cpp" />
     <ClCompile Include="Condition.cpp" />
     <ClCompile Include="FiniteStateMachine.cpp" />
+    <ClCompile Include="FleeForce.cpp" />
     <ClCompile Include="FollowBehaviour.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="IdleState.cpp" />
@@ -186,6 +187,7 @@
     <ClInclude Include="Behaviour.h" />
     <ClInclude Include="Condition.h" />
     <ClInclude Include="FiniteStateMachine.h" />
+    <ClInclude Include="FleeForce.h" />
     <ClInclude Include="FollowBehaviour.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="IdleState.h" />
