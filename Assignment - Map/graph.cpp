@@ -4,6 +4,11 @@ graph::graph(float screenWidth, float screenHeight, float nSize)
 {
 }
 
+graph::graph()
+{
+	node_size = 1;
+}
+
 graph::~graph()
 {
 }

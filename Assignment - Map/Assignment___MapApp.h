@@ -3,6 +3,7 @@
 #include "Application.h"
 #include "Renderer2D.h"
 #include "graph.h"
+#include "graph.h"
 class Assignment___MapApp : public aie::Application {
 public:
 
@@ -19,4 +20,5 @@ protected:
 
 	aie::Renderer2D*	m_2dRenderer;
 	aie::Font*			m_font;
+	graph graphMap;
 };

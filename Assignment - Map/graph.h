@@ -5,6 +5,7 @@ class graph
 {
 public:
 	graph(float screenWidth, float screenHeight, float nSize = -1);
+	graph();
 	~graph();
 	void createGraph();
 	void drawGraph(aie::Renderer2D* ren);

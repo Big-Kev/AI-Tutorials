@@ -19,6 +19,8 @@ bool Assignment___MapApp::startup() {
 	// the following path would be used instead: "./font/consolas.ttf"
 	m_font = new aie::Font("../bin/font/consolas.ttf", 32);
 
+	graphMap.createGraph();
+	
 	return true;
 }
 
@@ -45,7 +47,7 @@ void Assignment___MapApp::draw() {
 
 	// begin drawing sprites
 	m_2dRenderer->begin();
-
+	graphMap.drawGraph(m_2dRenderer);
 	// draw your stuff here!
 	
 	// output some text, uses the last used colour
