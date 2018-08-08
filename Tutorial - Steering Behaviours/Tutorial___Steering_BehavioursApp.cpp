@@ -20,16 +20,17 @@ bool Tutorial___Steering_BehavioursApp::startup() {
 	m_font = new aie::Font("../bin/font/consolas.ttf", 32);
 
 
-
+	m_wanderEnemyBehaviour.setPeram(2, 2, 2);
 	m_player.setSpeed(4);
 	m_player.addBehaviour(&m_playerBehaviour);
 	m_player.setPosition(Vector2(50, 50));
 
 	m_enemy.addBehaviour(&m_enemyBehaviour);
-	m_enemy.setPosition(Vector2(100, 100));
+	m_enemy.setPosition(Vector2(500, 500));
 
 	//m_enemyBehaviour.setSteeringForce(&m_seekPlayerBehaviour);
-	m_enemyBehaviour.setSteeringForce(&m_pursuePlayerBehaviour);
+	m_enemyBehaviour.setSteeringForce(&m_wanderEnemyBehaviour);
+	//m_enemyBehaviour.setSteeringForce(&m_pursuePlayerBehaviour);
 	m_pursuePlayerBehaviour.m_target = &m_player;
 	
 	m_fleePlayerBehaviour.m_target = &m_player;

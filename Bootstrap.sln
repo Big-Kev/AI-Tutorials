@@ -35,6 +35,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tutorial - Steering Behavio
 		{899DF1EF-E313-4D2D-B191-6AA87554D2A0} = {899DF1EF-E313-4D2D-B191-6AA87554D2A0}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assignment - Map", "Assignment - Map\Assignment - Map.vcxproj", "{04A8F603-B1C6-4BD9-AADD-75BE7AEB4AE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -99,6 +101,14 @@ Global
 		{ADA9CF3C-6C12-4F87-B29E-03B12BC62E6F}.Release|x64.Build.0 = Release|x64
 		{ADA9CF3C-6C12-4F87-B29E-03B12BC62E6F}.Release|x86.ActiveCfg = Release|Win32
 		{ADA9CF3C-6C12-4F87-B29E-03B12BC62E6F}.Release|x86.Build.0 = Release|Win32
+		{04A8F603-B1C6-4BD9-AADD-75BE7AEB4AE4}.Debug|x64.ActiveCfg = Debug|x64
+		{04A8F603-B1C6-4BD9-AADD-75BE7AEB4AE4}.Debug|x64.Build.0 = Debug|x64
+		{04A8F603-B1C6-4BD9-AADD-75BE7AEB4AE4}.Debug|x86.ActiveCfg = Debug|Win32
+		{04A8F603-B1C6-4BD9-AADD-75BE7AEB4AE4}.Debug|x86.Build.0 = Debug|Win32
+		{04A8F603-B1C6-4BD9-AADD-75BE7AEB4AE4}.Release|x64.ActiveCfg = Release|x64
+		{04A8F603-B1C6-4BD9-AADD-75BE7AEB4AE4}.Release|x64.Build.0 = Release|x64
+		{04A8F603-B1C6-4BD9-AADD-75BE7AEB4AE4}.Release|x86.ActiveCfg = Release|Win32
+		{04A8F603-B1C6-4BD9-AADD-75BE7AEB4AE4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

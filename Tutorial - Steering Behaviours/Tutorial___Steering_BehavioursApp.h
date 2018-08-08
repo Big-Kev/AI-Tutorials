@@ -8,6 +8,7 @@
 #include "SeekForce.h"
 #include "FleeForce.h"
 #include "PursueForce.h"
+#include "WanderForce.h"
 class Tutorial___Steering_BehavioursApp : public aie::Application {
 public:
 
@@ -34,6 +35,8 @@ protected:
 	SeekForce			m_seekPlayerBehaviour;
 	FleeForce			m_fleePlayerBehaviour;
 	PursueForce			m_pursuePlayerBehaviour;
+	WanderForce			m_wanderEnemyBehaviour;
+
 	Vector2				m_playerImage;
 	Vector2				m_enemyImage;
 };

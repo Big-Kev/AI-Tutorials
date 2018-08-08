@@ -4,14 +4,14 @@
 #include <time.h>      
 
 class WanderForce :
-	public SteeringBehaviour
+	public SteeringForce
 {
 public:
 	WanderForce();
 	~WanderForce();
 
 	Vector2 getForce(GameObject* gameObject);
-
+	void setPeram(float o, float r, float j);
 
 protected:
 	Vector2 m_target;
@@ -19,7 +19,7 @@ protected:
 	float m_offset;
 	float m_radius;
 	float m_jitter;
-
+	float target_accuracy_rec;
 
 
 };
