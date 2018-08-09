@@ -18,9 +18,8 @@ bool Assignment___MapApp::startup() {
 	// TODO: remember to change this when redistributing a build!
 	// the following path would be used instead: "./font/consolas.ttf"
 	m_font = new aie::Font("../bin/font/consolas.ttf", 32);
-
-	graphMap.createGraph();
 	
+	graphMap.createGraph(50, 50, 20, 50, 50);
 	return true;
 }
 
@@ -47,9 +46,9 @@ void Assignment___MapApp::draw() {
 
 	// begin drawing sprites
 	m_2dRenderer->begin();
-	graphMap.drawGraph(m_2dRenderer);
 	// draw your stuff here!
 	graphMap.drawGraph(m_2dRenderer);
+	
 	// output some text, uses the last used colour
 	m_2dRenderer->drawText(m_font, "Press ESC to quit", 0, 0);
 	

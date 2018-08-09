@@ -5,12 +5,13 @@
 class graph
 {
 public:
-	graph(float Width, float Height, float nSize = -1);
+	graph(float Width, float Height, float nSize, float startX, float startY);
 	graph();
 	~graph();
-	void createGraph();
+	void createGraph(int Width, int Height, float nSize, float startX, float startY);
 	void drawGraph(aie::Renderer2D* ren);
 protected:
+	void initGraph(int Width, int Height, float nSize, float startX, float startY);
 	float node_size;
 	int graph_height;
 	int graph_width;
