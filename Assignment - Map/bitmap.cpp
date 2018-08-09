@@ -64,7 +64,7 @@ void bitmap::bitmapTest(int map_width, int map_height)
 	unsigned char bmpfileheader[14] = { 'B','M', 0,0,0,0, 0,0, 0,0, 54,0,0,0 };
 	unsigned char bmpinfoheader[40] = { 40,0,0,0, 0,0,0,0, 0,0,0,0, 1,0, 24,0 };
 	unsigned char bmppad[3] = { 0,0,0 };
-
+	unsigned char bmppadtest[3] = { 255,0,0 };
 	bmpfileheader[2] = (unsigned char)(filesize);
 	bmpfileheader[3] = (unsigned char)(filesize >> 8);
 	bmpfileheader[4] = (unsigned char)(filesize >> 16);
@@ -87,6 +87,7 @@ void bitmap::bitmapTest(int map_width, int map_height)
 		fwrite(img + (w*(h - i - 1) * 3), 3, w, f);
 		fwrite(bmppad, 1, (4 - (w * 3) % 4) % 4, f);
 		fwrite(bmppad, 1, (4 - (w * 3) % 4) % 4, f);
+		
 
 	}
 	
