@@ -12,14 +12,14 @@ Assignment___MapApp::~Assignment___MapApp() {
 }
 
 bool Assignment___MapApp::startup() {
-	
+
 	m_2dRenderer = new aie::Renderer2D();
 
 	// TODO: remember to change this when redistributing a build!
 	// the following path would be used instead: "./font/consolas.ttf"
 	m_font = new aie::Font("../bin/font/consolas.ttf", 32);
-	
-	graphMap.createGraph(50, 50, 20, 50, 50);
+
+	graphMap.createGraph((getWindowWidth() / 20) - 1, (getWindowHeight() / 20) -1, 20, 10, 10);
 	return true;
 }
 
@@ -48,10 +48,10 @@ void Assignment___MapApp::draw() {
 	m_2dRenderer->begin();
 	// draw your stuff here!
 	graphMap.drawGraph(m_2dRenderer);
-	
+
 	// output some text, uses the last used colour
 	m_2dRenderer->drawText(m_font, "Press ESC to quit", 0, 0);
-	
+
 	// done drawing sprites
 	m_2dRenderer->end();
 }

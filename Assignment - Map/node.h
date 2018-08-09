@@ -16,9 +16,15 @@ public:
 
 
 	node* getRight() { return n_right; };
+	node* getLeft() { return n_left; };
+	node* getUp() { return n_up; };
+	node* getDown() { return n_down; };
 
 	void getGraphStats(graph* owner);
 	void drawNode(aie::Renderer2D* ren);
+
+	void drawRelations(aie::Renderer2D * ren);
+
 protected:
 	Vector2 n_pos;
 	float n_size;

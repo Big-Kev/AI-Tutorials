@@ -12,6 +12,8 @@ public:
 	void drawGraph(aie::Renderer2D* ren);
 protected:
 	void initGraph(int Width, int Height, float nSize, float startX, float startY);
+	void applyRelations();
+
 	float node_size;
 	int graph_height;
 	int graph_width;
