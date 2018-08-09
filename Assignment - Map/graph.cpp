@@ -2,11 +2,13 @@
 
 graph::graph(float screenWidth, float screenHeight, float nSize)
 {
+	node_size = 10;
+
 }
 
 graph::graph()
 {
-	node_size = 1;
+	node_size = 10;
 }
 
 graph::~graph()
@@ -28,5 +30,6 @@ void graph::drawGraph(aie::Renderer2D * ren)
 	node* current_node = node_start;
 	for (int i = 0; i < 20; i++) {
 		current_node->drawNode(ren);
+		current_node = current_node->getRight();
 	}
 }
