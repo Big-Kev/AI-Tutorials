@@ -19,6 +19,30 @@ void graph::initGraph(int Width, int Height, float nSize, float startX, float st
 
 }
 
+void graph::applyRelations()
+{
+	for (int i = 0; i < graph_height; i++) {
+		nodes[i][0].setRight(&nodes[i][1]);
+		nodes[i][1].setLeft(&nodes[i][0]);
+		for (int o = 1; o < graph_width - 1; o++) {
+			nodes[i][o].setRight(&nodes[i][o+1]);
+			nodes[i][o+1].setLeft(&nodes[i][o]);
+		}
+	}
+}
+
+void graph::applyRelations()
+{
+	for (int i = 0; i < graph_height; i++) {
+		nodes[i][0].setRight(&nodes[i][1]);
+		nodes[i][1].setLeft(&nodes[i][0]);
+		for (int o = 1; o < graph_width - 1; o++) {
+			nodes[i][o].setRight(&nodes[i][o + 1]);
+			nodes[i][o + 1].setLeft(&nodes[i][o]);
+		}
+	}
+}
+
 graph::graph()
 {
 	//node_size = 22;
@@ -50,7 +74,7 @@ void graph::createGraph(int Width, int Height, float nSize, float startX, float 
 			nodes[i].push_back(node(((node_size * o) + start_loc.x), (node_size * i) + start_loc.y, node_size));
 		}
 	}
-
+	applyRelations();
 
 }
 
@@ -64,8 +88,8 @@ void graph::drawGraph(aie::Renderer2D * ren)
 		current_node = current_node->getRight();
 	}*/
 
-	for (int i = 0; i < graph_height-1; i++) {
-		for (int o = 0; o < graph_width-1; o++) {
+	for (int i = 0; i < graph_height; i++) {
+		for (int o = 0; o < graph_width; o++) {
 			nodes[i][o].drawNode(ren);
 		}
 	}
