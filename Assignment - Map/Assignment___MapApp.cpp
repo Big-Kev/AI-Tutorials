@@ -49,7 +49,7 @@ void Assignment___MapApp::draw() {
 	m_2dRenderer->begin();
 	graphMap.drawGraph(m_2dRenderer);
 	// draw your stuff here!
-	
+	graphMap.drawGraph(m_2dRenderer);
 	// output some text, uses the last used colour
 	m_2dRenderer->drawText(m_font, "Press ESC to quit", 0, 0);
 	

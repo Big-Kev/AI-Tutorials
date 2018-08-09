@@ -18,5 +18,10 @@ node::~node()
 void node::drawNode(aie::Renderer2D * ren)
 {
 	ren->setRenderColour(1, 0, 0);
-	ren->drawCircle(n_pos.x, n_pos.y, 1);
+	//ren->drawCircle(n_pos.x, n_pos.y, 10);
+
+	ren->drawBox(n_pos.x, n_pos.y, 24, 24);
+	ren->setRenderColour(1, 1, 1);
+	ren->drawBox(n_pos.x + 0.5, n_pos.y+0.5, 22, 22);
+
 }
