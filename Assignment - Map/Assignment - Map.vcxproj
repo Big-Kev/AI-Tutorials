@@ -43,6 +43,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -163,12 +164,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Assignment___MapApp.cpp" />
+    <ClCompile Include="bitmap.cpp" />
     <ClCompile Include="graph.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="node.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Assignment___MapApp.h" />
+    <ClInclude Include="bitmap.h" />
     <ClInclude Include="graph.h" />
     <ClInclude Include="node.h" />
   </ItemGroup>

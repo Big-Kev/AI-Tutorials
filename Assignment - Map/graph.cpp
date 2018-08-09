@@ -93,18 +93,7 @@ void graph::createGraph(int Width, int Height, float nSize, float startX, float 
 }
 void graph::mapFromVectors() {
 	std::vector<Vector2> v;
-	v.push_back(Vector2(2, 3));
-	v.push_back(Vector2(2, 4));
-	v.push_back(Vector2(2, 5));
-	v.push_back(Vector2(3, 5));
-	v.push_back(Vector2(2, 6));
-	v.push_back(Vector2(2, 7));
-	v.push_back(Vector2(12, 3));
-	v.push_back(Vector2(22, 14));
-	v.push_back(Vector2(22, 15));
-	v.push_back(Vector2(23, 15));
-	v.push_back(Vector2(22, 6));
-	v.push_back(Vector2(2, 7));
+
 	for (int i = 0; i < graph_height; i++) {
 		for (int o = 0; o < graph_width; o++) {
 			for (int x = 0; x < v.size(); x++) {
@@ -115,6 +104,7 @@ void graph::mapFromVectors() {
 		}
 	}
 }
+
 
 void graph::drawGraph(aie::Renderer2D * ren)
 {

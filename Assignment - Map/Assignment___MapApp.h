@@ -3,7 +3,8 @@
 #include "Application.h"
 #include "Renderer2D.h"
 #include "graph.h"
-#include "graph.h"
+#include "bitmap.h"
+
 class Assignment___MapApp : public aie::Application {
 public:
 
@@ -17,7 +18,7 @@ public:
 	virtual void draw();
 
 protected:
-
+	bitmap b;
 	aie::Renderer2D*	m_2dRenderer;
 	aie::Font*			m_font;
 	graph graphMap;
