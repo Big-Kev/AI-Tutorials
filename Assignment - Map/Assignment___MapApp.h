@@ -18,7 +18,7 @@ public:
 	virtual void draw();
 
 protected:
-	bitmap b;
+	Bitmap b;
 	objectList o;
 	
 	aie::Renderer2D*	m_2dRenderer;

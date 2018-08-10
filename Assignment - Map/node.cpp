@@ -50,10 +50,10 @@ void node::drawNode(aie::Renderer2D * ren)
 
 	//ren->drawBox(n_pos.x, n_pos.y, n_size, n_size);
 	//ren->drawLine(n_pos.x, n_pos.y, n_pos.x + n_size, n_pos.y + n_size);
-	ren->setRenderColour(1, 0, 0, 0.5);
-	ren->drawLine(n_pos.x, n_pos.y, n_pos.x + n_size, n_pos.y);
-	ren->drawLine(n_pos.x, n_pos.y, n_pos.x, n_pos.y + n_size);
-	ren->setRenderColour(1, 1, 1, 0.5);
+	//ren->setRenderColour(1, 0, 0, 0.5);
+	//ren->drawLine(n_pos.x, n_pos.y, n_pos.x + n_size, n_pos.y);
+	//ren->drawLine(n_pos.x, n_pos.y, n_pos.x, n_pos.y + n_size);
+	//ren->setRenderColour(1, 1, 1, 0.5);
 
 	drawRelations(ren);
 	//ren->setRenderColour(1, 1, 1);

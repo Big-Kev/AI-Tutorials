@@ -11,6 +11,6 @@ public:
 	~objectList();
 	//vector3(xpos, ypos, type)
 	std::vector<Vector3> data;
-	void write();
+	void addDat(Vector3 v);
 };
 

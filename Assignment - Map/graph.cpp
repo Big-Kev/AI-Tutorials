@@ -55,7 +55,7 @@ graph::~graph()
 }
 
 
-void graph::createGraph(int Width, int Height, float nSize, float startX, float startY)
+void graph::createGraph(int Width, int Height, float nSize, float startX, float startY, objectList* olist)
 {
 	/*
 	node_start = new node(50, 50);
@@ -72,10 +72,12 @@ void graph::createGraph(int Width, int Height, float nSize, float startX, float 
 			nodes[i].push_back(node(((node_size * o) + start_loc.x), (node_size * i) + start_loc.y, node_size));
 		}
 	}
-	mapFromVectors();
+	mapFromVectors(olist);
 	//applyRelations();
 	//applyRelationsByDist();
-	float distance = 30;
+
+
+	float distance = 60;
 	for (int i = 0; i < graph_height; i++) {
 		for (int o = 0; o < graph_width; o++) {
 			for (int a = 0; a < graph_height; a++) {
@@ -91,18 +93,30 @@ void graph::createGraph(int Width, int Height, float nSize, float startX, float 
 	}
 
 }
-void graph::mapFromVectors() {
-	std::vector<Vector2> v;
+void graph::mapFromVectors(objectList* olist) {
 
+
+
+	for (int h = 0; h < graph_height; h++) {
+		for (int x = 0; x < graph_width; x++) {
+			int temp = graph_width * h + x;
+			if (olist->data[temp].x >= 100) {
+				nodes[h][x].toggleObstructed();
+			}
+		}
+	}
+	/*
 	for (int i = 0; i < graph_height; i++) {
 		for (int o = 0; o < graph_width; o++) {
-			for (int x = 0; x < v.size(); x++) {
-				if (v[x].x == o && v[x].y == i) {
+			for (int x = 0; x < olist->data.size(); x++) {
+				if (olist->data[x].x == o && olist->data[x].y == i && olist->data[x].y >= 1) {
 					nodes[i][o].toggleObstructed();
 				}
 			}
 		}
 	}
+	*/
+
 }
 
 

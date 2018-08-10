@@ -11,11 +11,8 @@ objectList::~objectList()
 {
 }
 
-void objectList::write()
+void objectList::addDat(Vector3 v)
 {
-	std::ofstream myfile;
-	myfile.open("example.txt");
-	myfile << "Writing this to a file.\n";
-	myfile.close();
-
+	data.push_back(v);
 }
+

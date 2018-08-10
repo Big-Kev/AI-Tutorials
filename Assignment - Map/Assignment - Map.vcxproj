@@ -164,6 +164,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Assignment___MapApp.cpp" />
+    <ClCompile Include="Bitmap.cpp" />
     <ClCompile Include="graph.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="node.cpp" />
@@ -171,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Assignment___MapApp.h" />
+    <ClInclude Include="Bitmap.h" />
     <ClInclude Include="graph.h" />
     <ClInclude Include="node.h" />
     <ClInclude Include="objectList.h" />
