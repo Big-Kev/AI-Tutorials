@@ -24,6 +24,6 @@ protected:
 	aie::Renderer2D*	m_2dRenderer;
 	aie::Font*			m_font;
 	
-
+	float x, y;
 	graph graphMap;
 };

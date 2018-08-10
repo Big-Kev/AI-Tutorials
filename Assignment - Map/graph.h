@@ -11,6 +11,8 @@ public:
 	void createGraph(int Width, int Height, float nSize, float startX, float startY, objectList* olist);
 	void mapFromVectors(objectList * olist);
 	void drawGraph(aie::Renderer2D* ren);
+
+	void getClosestNodes(float x, float y, aie::Renderer2D * ren);
 protected:
 	void initGraph(int Width, int Height, float nSize, float startX, float startY);
 	void applyRelations();
