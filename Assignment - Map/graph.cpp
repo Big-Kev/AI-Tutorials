@@ -133,102 +133,32 @@ void graph::getClosestNodes(float x, float y, aie::Renderer2D * ren)
 {
 	int n = 1;
 	std::vector<node*> nearbyNodes;
+	node* close;
 	for (int i = 0; i < n; i++) {
-		node* close;
-		int xnode = x /40;
-		int ynode = y /40;
+		int xnode = x / 40;
+		int ynode = y / 40;
 		close = &nodes[ynode][xnode];
 		//nearbyNodes.push_back(close);
-		ren->setRenderColour(0, 1, 1);
-		ren->drawLine(x, y, close->getPos().x, close->getPos().y);
-		ren->drawCircle(x, y, 10);
-	}
-	//others +==================================================================
-	for (int i = 0; i < n; i++) {
-		node* close;
-		int xnode = x / 40;
-		int ynode = y / 40;
-		close = &nodes[ynode + 1][xnode + 1];
-		//nearbyNodes.push_back(close);
-		ren->setRenderColour(0, 1, 1);
-		ren->drawLine(x, y, close->getPos().x, close->getPos().y);
-		ren->drawCircle(x, y, 10);
 	}
 
-	for (int i = 0; i < n; i++) {
-		node* close;
-		int xnode = x / 40;
-		int ynode = y / 40;
-		close = &nodes[ynode][xnode + 1];
-		//nearbyNodes.push_back(close);
-		ren->setRenderColour(0, 1, 1);
-		ren->drawLine(x, y, close->getPos().x, close->getPos().y);
-		ren->drawCircle(x, y, 10);
-	}
-	for (int i = 0; i < n; i++) {
-		node* close;
-		int xnode = x / 40;
-		int ynode = y / 40;
-		close = &nodes[ynode + 1][xnode];
-		//nearbyNodes.push_back(close);
-		ren->setRenderColour(0, 1, 1);
-		ren->drawLine(x, y, close->getPos().x, close->getPos().y);
-		ren->drawCircle(x, y, 10);
+	ren->setRenderColour(0, 1, 1);
+	ren->drawLine(x, y, close->getPos().x, close->getPos().y);
+	ren->drawCircle(x, y, 10);
+
+
+
+	for (node *copynode : close->neighbours) {
+		nearbyNodes = close->neighbours;
 	}
 
 
-	for (int i = 0; i < n; i++) {
-		node* close;
-		int xnode = x / 40;
-		int ynode = y / 40;
-		close = &nodes[ynode -1][xnode];
-		//nearbyNodes.push_back(close);
-		ren->setRenderColour(0, 1, 1);
-		ren->drawLine(x, y, close->getPos().x, close->getPos().y);
-		ren->drawCircle(x, y, 10);
+	for (int i = 0; i < nearbyNodes.size(); i++) {
+		ren->drawLine(x, y, nearbyNodes[i]->getPos().x, nearbyNodes[i]->getPos().y);
+		
 	}
 
-	for (int i = 0; i < n; i++) {
-		node* close;
-		int xnode = x / 40;
-		int ynode = y / 40;
-		close = &nodes[ynode ][xnode -1];
-		//nearbyNodes.push_back(close);
-		ren->setRenderColour(0, 1, 1);
-		ren->drawLine(x, y, close->getPos().x, close->getPos().y);
-		ren->drawCircle(x, y, 10);
-	}
 
-	for (int i = 0; i < n; i++) {
-		node* close;
-		int xnode = x / 40;
-		int ynode = y / 40;
-		close = &nodes[ynode -1][xnode + 1];
-		//nearbyNodes.push_back(close);
-		ren->setRenderColour(0, 1, 1);
-		ren->drawLine(x, y, close->getPos().x, close->getPos().y);
-		ren->drawCircle(x, y, 10);
-	}
-	for (int i = 0; i < n; i++) {
-		node* close;
-		int xnode = x / 40;
-		int ynode = y / 40;
-		close = &nodes[ynode + 1][xnode - 1];
-		//nearbyNodes.push_back(close);
-		ren->setRenderColour(0, 1, 1);
-		ren->drawLine(x, y, close->getPos().x, close->getPos().y);
-		ren->drawCircle(x, y, 10);
-	}
 
-	for (int i = 0; i < n; i++) {
-		node* close;
-		int xnode = x / 40;
-		int ynode = y / 40;
-		close = &nodes[ynode -1][xnode - 1];
-		//nearbyNodes.push_back(close);
-		ren->setRenderColour(0, 1, 1);
-		ren->drawLine(x, y, close->getPos().x, close->getPos().y);
-		ren->drawCircle(x, y, 10);
-	}
+
 	//nodes[x][y].getPos().x
 }
