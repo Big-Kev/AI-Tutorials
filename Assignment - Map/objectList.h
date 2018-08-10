@@ -9,7 +9,6 @@ class objectList
 public:
 	objectList();
 	~objectList();
-	//vector3(xpos, ypos, type)
 	std::vector<Vector3> data;
 	void addDat(Vector3 v);
 };

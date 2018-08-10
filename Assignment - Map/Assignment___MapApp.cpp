@@ -18,7 +18,7 @@ bool Assignment___MapApp::startup() {
 	// TODO: remember to change this when redistributing a build!
 	// the following path would be used instead: "./font/consolas.ttf"
 	m_font = new aie::Font("../bin/font/consolas.ttf", 32);
-	//b.bitmapTest((getWindowWidth() / 20) - 1, (getWindowHeight() / 20) - 1);
+	
 	b.ReadBMP("test.bmp", &o);
 	graphMap.createGraph((getWindowWidth() / 40) - 1, (getWindowHeight() / 40) -1, 40, 10, 10, &o);
 	return true;

@@ -122,23 +122,9 @@ void graph::mapFromVectors(objectList* olist) {
 
 void graph::drawGraph(aie::Renderer2D * ren)
 {
-	/*
-	node* current_node = node_start;
-	for (int i = 0; i < graph_width; i++) {
-		current_node->drawNode(ren);
-		current_node = current_node->getRight();
-	}*/
-
 	for (int i = 0; i < graph_height; i++) {
 		for (int o = 0; o < graph_width; o++) {
 			nodes[i][o].drawNode(ren);
 		}
 	}
-
-	//for (int i = 0; i < graph_height-2; i++) {
-		//for (node n : nodes[0]) {
-		//	n.drawNode(ren);
-
-			//}
-
 }

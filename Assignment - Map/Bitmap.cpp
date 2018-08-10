@@ -56,7 +56,5 @@ unsigned char* Bitmap::ReadBMP(char* filename, objectList* olist)
 
 void Bitmap::bmptest()
 {
-	//fstream *f;
-	//f->open("test.bmp", std::fstream::in | std::fstream::out);
-
+	
 }
