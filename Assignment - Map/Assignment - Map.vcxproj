@@ -164,16 +164,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Assignment___MapApp.cpp" />
-    <ClCompile Include="bitmap.cpp" />
     <ClCompile Include="graph.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="node.cpp" />
+    <ClCompile Include="objectList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Assignment___MapApp.h" />
-    <ClInclude Include="bitmap.h" />
     <ClInclude Include="graph.h" />
     <ClInclude Include="node.h" />
+    <ClInclude Include="objectList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

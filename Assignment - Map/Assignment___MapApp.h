@@ -4,7 +4,7 @@
 #include "Renderer2D.h"
 #include "graph.h"
 #include "bitmap.h"
-
+#include "objectList.h"
 class Assignment___MapApp : public aie::Application {
 public:
 
@@ -19,7 +19,11 @@ public:
 
 protected:
 	bitmap b;
+	objectList o;
+	
 	aie::Renderer2D*	m_2dRenderer;
 	aie::Font*			m_font;
+	
+
 	graph graphMap;
 };
