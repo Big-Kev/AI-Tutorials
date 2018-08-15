@@ -2,6 +2,13 @@
 #include "Vector2.h"
 #include <vector>
 #include "Renderer2d.h"
+
+
+struct Edge {
+	node* target;
+	float cost;
+};
+
 class graph;
 class node
 {
@@ -27,7 +34,15 @@ public:
 
 	void drawRelations(aie::Renderer2D * ren);
 
+	bool node::operator > (const node& other) const
+	{
+		//return ( dist > other.dist);
+	}
+
+
+	node* parent;
 	std::vector<node*> neighbours;
+	std::vector<Edge> connections;
 protected:
 	bool obstructed = false;
 	Vector2 n_pos;
