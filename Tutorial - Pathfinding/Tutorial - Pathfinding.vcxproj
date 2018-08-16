@@ -166,6 +166,7 @@
     <ClCompile Include="DijkstrasSearch.cpp" />
     <ClCompile Include="graph.cpp" />
     <ClCompile Include="node.cpp" />
+    <ClCompile Include="NodeEdge.cpp" />
     <ClCompile Include="objectList.cpp" />
     <ClCompile Include="Tutorial___PathfindingApp.cpp" />
     <ClCompile Include="main.cpp" />
@@ -175,6 +176,7 @@
     <ClInclude Include="DijkstrasSearch.h" />
     <ClInclude Include="graph.h" />
     <ClInclude Include="node.h" />
+    <ClInclude Include="NodeEdge.h" />
     <ClInclude Include="objectList.h" />
     <ClInclude Include="Tutorial___PathfindingApp.h" />
   </ItemGroup>

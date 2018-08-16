@@ -4,15 +4,27 @@
 #include "Renderer2d.h"
 
 
-struct Edge {
-	node* target;
-	float cost;
-};
 
 class graph;
 class node
 {
 public:
+
+	struct Edge {
+		node* target;
+		float cost;
+
+		bool Edge::operator > (const Edge& other) const
+		{
+			return (cost> other.cost);
+		};
+		bool Edge::operator < (const Edge& other) const
+		{
+			return (cost < other.cost);
+		};
+	};
+
+
 	node(Vector2 v, float size);
 	node(float x, float y, float size);
 	~node();
@@ -29,18 +41,16 @@ public:
 	node* getUp() { return n_up; };
 	node* getDown() { return n_down; };
 	void findNeighbours(std::vector<std::vector<node>> nodeList, int width, int height, float distance);
+	void addConnections();
 	void getGraphStats(graph* owner);
 	void drawNode(aie::Renderer2D* ren);
 
 	void drawRelations(aie::Renderer2D * ren);
 
-	bool node::operator > (const node& other) const
-	{
-		//return ( dist > other.dist);
-	}
-
+	
 
 	node* parent;
+	float gScore;
 	std::vector<node*> neighbours;
 	std::vector<Edge> connections;
 protected:

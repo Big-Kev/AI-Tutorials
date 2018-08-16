@@ -5,7 +5,7 @@
 #include <stack>
 
 struct Path {
-	std::stack<node*> path
+	std::stack<node*> path;
 };
 
 class DijkstrasSearch

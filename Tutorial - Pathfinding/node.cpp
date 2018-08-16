@@ -30,6 +30,17 @@ void node::findNeighbours(std::vector<std::vector<node>> nodeList, int width, in
 			}
 		}
 	}
+	addConnections();//adding neighbours to edge list
+}
+
+void node::addConnections()
+{
+	for (int i = 0; i < neighbours.size(); i++) {
+		Edge e;
+		e.cost = 1;
+		e.target = neighbours[i];
+		connections.push_back(e);
+	}
 }
 
 void node::getGraphStats(graph * owner)
