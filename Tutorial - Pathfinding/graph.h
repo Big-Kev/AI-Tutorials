@@ -13,7 +13,8 @@ public:
 	void drawGraph(aie::Renderer2D* ren);
 
 	void getClosestNodes(float x, float y, aie::Renderer2D * ren);
-protected:
+	node * getClosestNodePointer(float x, float y);
+//protected:
 	void initGraph(int Width, int Height, float nSize, float startX, float startY);
 	void applyRelations();
 

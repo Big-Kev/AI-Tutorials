@@ -77,7 +77,7 @@ void graph::createGraph(int Width, int Height, float nSize, float startX, float 
 	//applyRelationsByDist();
 
 
-	float distance = 60;
+	float distance = 80;
 	for (int i = 0; i < graph_height; i++) {
 		for (int o = 0; o < graph_width; o++) {
 			for (int a = 0; a < graph_height; a++) {
@@ -85,6 +85,7 @@ void graph::createGraph(int Width, int Height, float nSize, float startX, float 
 					if (nodes[i][o].getPos().pythag(nodes[a][b].getPos()) < distance * distance) {
 						if (nodes[i][o].isObstructed() == false && nodes[a][b].isObstructed() == false) {
 							nodes[i][o].addNeighbour(&nodes[a][b]);
+							nodes[i][o].addConnections();//adding neighbours to edge list
 						}
 					}
 				}
@@ -154,11 +155,25 @@ void graph::getClosestNodes(float x, float y, aie::Renderer2D * ren)
 
 	for (int i = 0; i < nearbyNodes.size(); i++) {
 		ren->drawLine(x, y, nearbyNodes[i]->getPos().x, nearbyNodes[i]->getPos().y);
-		
+
 	}
 
 
 
 
 	//nodes[x][y].getPos().x
+}
+
+node* graph::getClosestNodePointer(float x, float y)
+{
+	int n = 1;
+	std::vector<node*> nearbyNodes;
+	node* close;
+
+	int xnode = x / 40;
+	int ynode = y / 40;
+	close = &nodes[ynode][xnode];
+	//nearbyNodes.push_back(close);
+
+	return close;
 }

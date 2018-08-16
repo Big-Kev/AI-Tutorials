@@ -6,14 +6,18 @@ node::node(Vector2 v, float size)
 	n_pos = v;
 	n_size = size;
 	setRight(nullptr);
+	parent = nullptr;
+	gScore = FLT_MAX;
 }
 node::node(float x, float y, float size)
 {
 	n_pos.x = x;
 	n_pos.y = y;
 	n_size = size;
+	parent = nullptr;
 	setRight(nullptr);
 	setLeft(nullptr);
+	gScore = FLT_MAX;
 }
 node::~node()
 {
@@ -39,7 +43,7 @@ void node::addConnections()
 		Edge e;
 		e.cost = 1;
 		e.target = neighbours[i];
-		connections.push_back(e);
+		connections.push_back(Edge() = e);
 	}
 }
 

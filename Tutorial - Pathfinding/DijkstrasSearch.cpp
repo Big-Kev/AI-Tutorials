@@ -19,6 +19,8 @@ Path DijkstrasSearch::dijkstrasSearch(node * startNode, node * endNode)
 	node* dijkstraStart;
 	startNode->parent = nullptr;
 	startNode->gScore = 0;
+
+
 	openList.push_back(startNode);
 
 	while (openList.empty() == false) {
@@ -26,7 +28,7 @@ Path DijkstrasSearch::dijkstrasSearch(node * startNode, node * endNode)
 		currentNode = openList[0];
 
 		if (currentNode == endNode) {
-			continue;
+			break;
 		}
 
 		openList.erase(openList.begin());
@@ -34,17 +36,28 @@ Path DijkstrasSearch::dijkstrasSearch(node * startNode, node * endNode)
 
 		for (node::Edge e : currentNode->connections) {
 			if (std::find(closedList.begin(), closedList.end(), e.target) == closedList.end()) {//checking if not in lcosed list 
-				e.target->gScore = e.cost + currentNode->gScore;
+				//e.target->gScore = e.cost + currentNode->gScore;
 				if (std::find(openList.begin(), openList.end(), e.target) == openList.end()) {//checking if not in lcosed list 
-					e.target->gScore = currentNode->gScore; // WUT?? is gscore refering to current node gscore
+					//e.target->gScore = currentNode->gScore; 
+							e.target->gScore = e.cost + currentNode->gScore;
 					e.target->parent = currentNode;
 					openList.push_back(e.target);
 				}
 				else if (currentNode->gScore < e.target->gScore) {
-					e.target->gScore = currentNode->gScore;
+					//e.target->gScore = currentNode->gScore;
+								e.target->gScore = e.cost + currentNode->gScore;
 					e.target->parent = currentNode;
 				}
 			}
 		}
 	}
+
+
+	Path p;//not a stack of vector 2s, but a stack of nodes
+	currentNode = endNode;
+	while (currentNode != nullptr) {
+		p.path.push(currentNode->getPos());
+		currentNode = currentNode->parent;
+	}
+	return p;
 }
