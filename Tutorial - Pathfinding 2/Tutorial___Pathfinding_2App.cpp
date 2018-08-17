@@ -20,7 +20,7 @@ bool Tutorial___Pathfinding_2App::startup() {
 	m_font = new aie::Font("../bin/font/consolas.ttf", 32);
 	b.ReadBMP("test.bmp", &o);
 	graphMap.createGraph((getWindowWidth() / 40) - 1, (getWindowHeight() / 40) - 1, 40, 10, 10, &o);
-	p1 = pathing1.dijkstrasSearch((graphMap.getClosestNodePointer(100, 350)), (graphMap.getClosestNodePointer(800, 250)));
+	p1 = pathing1.aStareSearch((graphMap.getClosestNodePointer(100, 350)), (graphMap.getClosestNodePointer(800, 250)));
 	pos = graphMap.getClosestNodePointer(200, 350)->getPos();
 
 	return true;

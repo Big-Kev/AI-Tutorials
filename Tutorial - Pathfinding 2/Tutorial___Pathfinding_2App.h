@@ -4,7 +4,8 @@
 #include "Renderer2D.h"
 #include "Bitmap.h"
 #include "graph.h"
-#include "DijkstrasSearch.h"
+//#include "DijkstrasSearch.h"
+#include "AStarSearch.h"
 #include "Vector2.h"
 #include <vector>
 
@@ -29,7 +30,7 @@ protected:
 
 	Vector2 pos;
 	graph graphMap;
-	DijkstrasSearch pathing1;
+	AStarSearch pathing1;
 	Path p1;
 	vector<Vector2> prevNodes;
 };

@@ -51,6 +51,8 @@ Path AStarSearch::aStareSearch(node * startNode, node * endNode)
 				else if (currentNode->gScore < e.target->gScore) {
 					//e.target->gScore = currentNode->gScore;
 					e.target->gScore = e.cost + currentNode->gScore;
+					e.target->hScore = sqrt(e.target->getPos().pythag(endNode->getPos()));
+					e.target->fScore = e.target->gScore + e.target->hScore;
 					e.target->parent = currentNode;
 				}
 			}

@@ -16,11 +16,13 @@ public:
 
 		bool Edge::operator > (const Edge& other) const
 		{
-			return (cost> other.cost);
+			return (target->fScore > other.target->fScore);
+			//return (cost> other.cost);
 		};
 		bool Edge::operator < (const Edge& other) const
 		{
-			return (cost < other.cost);
+			return (target->fScore < other.target->fScore);
+			//return (cost < other.cost);
 		};
 	};
 
@@ -48,6 +50,14 @@ public:
 	void drawRelations(aie::Renderer2D * ren);
 
 	
+	bool node::operator > (const node& other) const
+	{
+		return (fScore > other.fScore);
+	};
+	bool node::operator < (const node& other) const
+	{
+		return (fScore < other.fScore);
+	};
 
 	node* parent;
 	float gScore;
