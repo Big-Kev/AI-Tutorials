@@ -51,6 +51,8 @@ public:
 
 	node* parent;
 	float gScore;
+	float hScore;
+	float fScore;
 	std::vector<node*> neighbours;
 	std::vector<Edge> connections;
 protected:

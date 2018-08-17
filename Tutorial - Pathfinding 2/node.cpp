@@ -8,6 +8,8 @@ node::node(Vector2 v, float size)
 	setRight(nullptr);
 	parent = nullptr;
 	gScore = FLT_MAX;
+	hScore = FLT_MAX;
+	fScore = FLT_MAX;
 }
 node::node(float x, float y, float size)
 {
@@ -18,6 +20,8 @@ node::node(float x, float y, float size)
 	setRight(nullptr);
 	setLeft(nullptr);
 	gScore = FLT_MAX;
+	hScore = FLT_MAX;
+	fScore = FLT_MAX;
 }
 node::~node()
 {

@@ -162,6 +162,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AStarSearch.cpp" />
     <ClCompile Include="Bitmap.cpp" />
     <ClCompile Include="DijkstrasSearch.cpp" />
     <ClCompile Include="graph.cpp" />
@@ -172,6 +173,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AStarSearch.h" />
     <ClInclude Include="Bitmap.h" />
     <ClInclude Include="DijkstrasSearch.h" />
     <ClInclude Include="graph.h" />

@@ -39,6 +39,9 @@
     <ClCompile Include="objectList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AStarSearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tutorial___Pathfinding_2App.h">
@@ -60,6 +63,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="objectList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AStarSearch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
