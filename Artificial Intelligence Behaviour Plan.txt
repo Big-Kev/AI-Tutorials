@@ -1,0 +1,38 @@
+======================================
+Artificial Intelligence Behaviour Plan
+======================================
+
+1. Decision Making
+Using a finite state machine
+with behaviours and transitions
+
+	Pros:
+	Allows specific transitions between states
+	
+	Cons:
+	With more behaviours the amount of transitions
+	required becomes overly complicated
+	
+	Other Options:
+	Behaviour trees
+	Blackboards
+	Planing
+	
+2. Pathfinding Technique
+Using A* to find path 
+and pass the path made of 
+nodes to a behaviour which 
+makes the game object follow
+
+	Pros:
+	Good for finding point a to b
+	for an individual or small group
+	of objects
+	
+	Cons:
+	not as good for large groups of 
+	objects moving to a point
+	
+	Other Options:
+	Steering Behaviours and obstical avoidence
+	Flow Fields
