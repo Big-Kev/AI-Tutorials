@@ -25,7 +25,9 @@ bool Assignment___AI_ImplementationApp::startup() {
 	pos = graphMap.getClosestNodePointer(200, 350)->getPos();
 
 	//setting up behaviours
-	m_pathEnemyBehaviour.setSpeed(10);
+	m_player.setPosition(Vector2(810 , 200));
+	m_pathEnemyBehaviour.setSpeed(1);
+	m_player.setSpeed(5);
 	m_enemy.setPosition(Vector2(100, 350));
 	m_pathEnemyBehaviour.setPath(p1);
 	m_enemy.addBehaviour(&m_pathEnemyBehaviour);
@@ -43,12 +45,21 @@ void Assignment___AI_ImplementationApp::shutdown() {
 
 void Assignment___AI_ImplementationApp::update(float deltaTime) {
 
-
-	m_enemy.update(deltaTime);
-
-
 	// input example
 	aie::Input* input = aie::Input::getInstance();
+
+	m_playerBehaviour.getInput(input);
+	
+	
+	if (m_playerImage.pythag(m_enemyImage) < 500 * 500) {
+		p1 = pathing1.aStareSearch((graphMap.getClosestNodePointer(m_enemyImage.x, m_enemyImage.y)), (graphMap.getClosestNodePointer(m_playerImage.x, m_playerImage.y)));
+		p1.path.pop();
+		m_pathEnemyBehaviour.setPath(p1);
+
+	}
+	m_player.update(deltaTime);
+	m_enemy.update(deltaTime);
+
 
 	// exit the application
 	if (input->isKeyDown(aie::INPUT_KEY_ESCAPE))
@@ -66,10 +77,12 @@ void Assignment___AI_ImplementationApp::draw() {
 	// draw your stuff here!'
 	graphMap.drawGraph(m_2dRenderer);
 	m_enemy.getPosition(m_enemyImage);
+	m_2dRenderer->setRenderColour(1, 0, 0);
 	m_2dRenderer->drawCircle(m_enemyImage.x, m_enemyImage.y, 10);
 
 	m_player.getPosition(m_playerImage);
-	m_2dRenderer->drawCircle(m_enemyImage.x, m_enemyImage.y, 10);
+	m_2dRenderer->setRenderColour(0, 1, 0);
+	m_2dRenderer->drawCircle(m_playerImage.x, m_playerImage.y, 10);
 	// output some text, uses the last used colour
 	m_2dRenderer->drawText(m_font, "Press ESC to quit", 0, 0);
 
