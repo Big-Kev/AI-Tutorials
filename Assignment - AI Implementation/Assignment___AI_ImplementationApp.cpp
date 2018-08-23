@@ -18,6 +18,19 @@ bool Assignment___AI_ImplementationApp::startup() {
 	// TODO: remember to change this when redistributing a build!
 	// the following path would be used instead: "./font/consolas.ttf"
 	m_font = new aie::Font("../bin/font/consolas.ttf", 32);
+	//creating map
+	b.ReadBMP("test.bmp", &o);
+	graphMap.createGraph((getWindowWidth() / 40) - 1, (getWindowHeight() / 40) - 1, 40, 10, 10, &o);
+	p1 = pathing1.aStareSearch((graphMap.getClosestNodePointer(100, 350)), (graphMap.getClosestNodePointer(800, 250)));
+	pos = graphMap.getClosestNodePointer(200, 350)->getPos();
+
+	//setting up behaviours
+	m_pathEnemyBehaviour.setSpeed(10);
+	m_enemy.setPosition(Vector2(100, 350));
+	m_pathEnemyBehaviour.setPath(p1);
+	m_enemy.addBehaviour(&m_pathEnemyBehaviour);
+	m_player.addBehaviour(&m_playerBehaviour);
+
 
 	return true;
 }
@@ -29,6 +42,10 @@ void Assignment___AI_ImplementationApp::shutdown() {
 }
 
 void Assignment___AI_ImplementationApp::update(float deltaTime) {
+
+
+	m_enemy.update(deltaTime);
+
 
 	// input example
 	aie::Input* input = aie::Input::getInstance();
@@ -46,8 +63,13 @@ void Assignment___AI_ImplementationApp::draw() {
 	// begin drawing sprites
 	m_2dRenderer->begin();
 
-	// draw your stuff here!
-	
+	// draw your stuff here!'
+	graphMap.drawGraph(m_2dRenderer);
+	m_enemy.getPosition(m_enemyImage);
+	m_2dRenderer->drawCircle(m_enemyImage.x, m_enemyImage.y, 10);
+
+	m_player.getPosition(m_playerImage);
+	m_2dRenderer->drawCircle(m_enemyImage.x, m_enemyImage.y, 10);
 	// output some text, uses the last used colour
 	m_2dRenderer->drawText(m_font, "Press ESC to quit", 0, 0);
 
