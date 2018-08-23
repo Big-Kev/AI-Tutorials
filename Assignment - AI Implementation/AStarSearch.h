@@ -14,6 +14,6 @@ class AStarSearch
 public:
 	AStarSearch();
 	~AStarSearch();
-	Path aStareSearch(node * startNode, node * endNode);
+	Path aStareSearch(node * startNode, node * endNode);// rename later aStarSearch
 };
 

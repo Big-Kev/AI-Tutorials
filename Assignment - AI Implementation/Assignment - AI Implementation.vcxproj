@@ -162,11 +162,69 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Agent.cpp" />
     <ClCompile Include="Assignment___AI_ImplementationApp.cpp" />
+    <ClCompile Include="AStarSearch.cpp" />
+    <ClCompile Include="AttackState.cpp" />
+    <ClCompile Include="Behaviour.cpp" />
+    <ClCompile Include="Bitmap.cpp" />
+    <ClCompile Include="Condition.cpp" />
+    <ClCompile Include="DijkstrasSearch.cpp" />
+    <ClCompile Include="EvadeForce.cpp" />
+    <ClCompile Include="FiniteStateMachine.cpp" />
+    <ClCompile Include="FleeForce.cpp" />
+    <ClCompile Include="FollowBehaviour.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="graph.cpp" />
+    <ClCompile Include="IdleState.cpp" />
+    <ClCompile Include="KeyboardBehaviour.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="node.cpp" />
+    <ClCompile Include="NodeEdge.cpp" />
+    <ClCompile Include="objectList.cpp" />
+    <ClCompile Include="PathBehaviour.cpp" />
+    <ClCompile Include="PursueForce.cpp" />
+    <ClCompile Include="SeekForce.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="SteeringBehaviour.cpp" />
+    <ClCompile Include="SteeringForce.cpp" />
+    <ClCompile Include="Transition.cpp" />
+    <ClCompile Include="WanderForce.cpp" />
+    <ClCompile Include="WithinRangeCondition.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Agent.h" />
     <ClInclude Include="Assignment___AI_ImplementationApp.h" />
+    <ClInclude Include="AStarSearch.h" />
+    <ClInclude Include="AttackState.h" />
+    <ClInclude Include="Behaviour.h" />
+    <ClInclude Include="Bitmap.h" />
+    <ClInclude Include="Condition.h" />
+    <ClInclude Include="DijkstrasSearch.h" />
+    <ClInclude Include="EvadeForce.h" />
+    <ClInclude Include="FiniteStateMachine.h" />
+    <ClInclude Include="FleeForce.h" />
+    <ClInclude Include="FollowBehaviour.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="graph.h" />
+    <ClInclude Include="IdleState.h" />
+    <ClInclude Include="KeyboardBehaviour.h" />
+    <ClInclude Include="node.h" />
+    <ClInclude Include="NodeEdge.h" />
+    <ClInclude Include="objectList.h" />
+    <ClInclude Include="PathBehaviour.h" />
+    <ClInclude Include="PursueForce.h" />
+    <ClInclude Include="SeekForce.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="SteeringBehaviour.h" />
+    <ClInclude Include="SteeringForce.h" />
+    <ClInclude Include="Transition.h" />
+    <ClInclude Include="WanderForce.h" />
+    <ClInclude Include="WithinRangeCondition.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="img.bmp" />
+    <Image Include="test.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
