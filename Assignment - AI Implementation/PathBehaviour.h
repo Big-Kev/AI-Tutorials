@@ -1,6 +1,6 @@
 #pragma once
 #include "Behaviour.h"
-
+#include <stack>
 class PathBehaviour :
 	public Behaviour
 {
@@ -12,11 +12,11 @@ public:
 
 	void setSpeed(float speed) { m_speed = speed; }
 
-	void setPath(Path& path) { m_path = path; }
+	void setPath(Path path);
+	
 
-
-private:
-	Path m_path;
+protected:
+	std::stack<Vector2> m_path;
 	float m_speed;
 	GameObject* m_target;
 	
