@@ -21,19 +21,19 @@ bool Assignment___AI_ImplementationApp::startup() {
 	//creating map
 	b.ReadBMP("test.bmp", &o);
 	graphMap.createGraph((getWindowWidth() / 40) - 1, (getWindowHeight() / 40) - 1, 40, 10, 10, &o);
-	p1 = pathing1.aStareSearch((graphMap.getClosestNodePointer(100, 350)), (graphMap.getClosestNodePointer(800, 250)));
 	pos = graphMap.getClosestNodePointer(200, 350)->getPos();
 
+	//	p1 = pathing1.aStareSearch((graphMap.getClosestNodePointer(100, 350)), (graphMap.getClosestNodePointer(800, 250)));
 	//setting up behaviours
 	m_player.setPosition(Vector2(810 , 200));
-	m_pathEnemyBehaviour.setSpeed(1);
-	m_player.setSpeed(5);
-	m_enemy.setPosition(Vector2(100, 350));
-	m_pathEnemyBehaviour.setPath(p1);
-	m_enemy.addBehaviour(&m_pathEnemyBehaviour);
 	m_player.addBehaviour(&m_playerBehaviour);
-
-
+	m_playerBehaviour.setSteeringForce(&m_playerSteering);
+	//m_pathEnemyBehaviour.setSpeed(1);
+	//m_player.setSpeed(10);
+	m_enemy.setPosition(Vector2(100, 350));
+	//m_pathEnemyBehaviour.setPath(p1);
+	//m_enemy.addBehaviour(&m_pathEnemyBehaviour);
+	//m_player.addBehaviour(&m_playerBehaviour);
 	return true;
 }
 
@@ -47,20 +47,22 @@ void Assignment___AI_ImplementationApp::update(float deltaTime) {
 
 	// input example
 	aie::Input* input = aie::Input::getInstance();
-
-	m_playerBehaviour.getInput(input);
+	m_playerSteering.getInput(input);
+	//m_playerBehaviour.getInput(input);
 	
 	
-	if (m_playerImage.pythag(m_enemyImage) < 500 * 500) {
-		p1 = pathing1.aStareSearch((graphMap.getClosestNodePointer(m_enemyImage.x, m_enemyImage.y)), (graphMap.getClosestNodePointer(m_playerImage.x, m_playerImage.y)));
-		p1.path.pop();
-		m_pathEnemyBehaviour.setPath(p1);
+	//if (m_playerImage.pythag(m_enemyImage) < 500 * 500) {
+	//	p1 = pathing1.aStareSearch((graphMap.getClosestNodePointer(m_enemyImage.x, m_enemyImage.y)), (graphMap.getClosestNodePointer(m_playerImage.x, m_playerImage.y)));
+	//	p1.path.pop();
+	//	m_pathEnemyBehaviour.setPath(p1);
+	//
+	//}
 
-	}
+
 	m_player.update(deltaTime);
 	m_enemy.update(deltaTime);
 
-
+	
 	// exit the application
 	if (input->isKeyDown(aie::INPUT_KEY_ESCAPE))
 		quit();

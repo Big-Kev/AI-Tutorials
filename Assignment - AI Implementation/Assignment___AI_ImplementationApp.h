@@ -8,6 +8,8 @@
 #include "PathBehaviour.h"
 #include "KeyboardBehaviour.h"
 #include <vector>
+#include "SteeringBehaviour.h"
+#include "InputForce.h"
 class Assignment___AI_ImplementationApp : public aie::Application {
 public:
 
@@ -32,11 +34,11 @@ protected:
 	AStarSearch pathing1;
 	Path p1;
 	std::vector<Vector2> prevNodes;
-
 	PathBehaviour aStarTest;
 
 	GameObject			m_player;
-	KeyboardBehaviour	m_playerBehaviour;
+	SteeringBehaviour	m_playerBehaviour;
+	InputForce m_playerSteering;
 
 	GameObject			m_enemy;
 	//SeekForce			m_seekPlayerBehaviour;

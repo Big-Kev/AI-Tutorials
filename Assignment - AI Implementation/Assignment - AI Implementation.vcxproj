@@ -169,6 +169,7 @@
     <ClCompile Include="Behaviour.cpp" />
     <ClCompile Include="Bitmap.cpp" />
     <ClCompile Include="Condition.cpp" />
+    <ClCompile Include="DecelerateForce.cpp" />
     <ClCompile Include="DijkstrasSearch.cpp" />
     <ClCompile Include="EvadeForce.cpp" />
     <ClCompile Include="FiniteStateMachine.cpp" />
@@ -177,6 +178,7 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="graph.cpp" />
     <ClCompile Include="IdleState.cpp" />
+    <ClCompile Include="InputForce.cpp" />
     <ClCompile Include="KeyboardBehaviour.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="node.cpp" />
@@ -200,6 +202,7 @@
     <ClInclude Include="Behaviour.h" />
     <ClInclude Include="Bitmap.h" />
     <ClInclude Include="Condition.h" />
+    <ClInclude Include="DecelerateForce.h" />
     <ClInclude Include="DijkstrasSearch.h" />
     <ClInclude Include="EvadeForce.h" />
     <ClInclude Include="FiniteStateMachine.h" />
@@ -208,6 +211,7 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="graph.h" />
     <ClInclude Include="IdleState.h" />
+    <ClInclude Include="InputForce.h" />
     <ClInclude Include="KeyboardBehaviour.h" />
     <ClInclude Include="node.h" />
     <ClInclude Include="NodeEdge.h" />
