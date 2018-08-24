@@ -181,6 +181,7 @@
     <ClCompile Include="InputForce.cpp" />
     <ClCompile Include="KeyboardBehaviour.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MoveToForce.cpp" />
     <ClCompile Include="node.cpp" />
     <ClCompile Include="NodeEdge.cpp" />
     <ClCompile Include="objectList.cpp" />
@@ -213,6 +214,7 @@
     <ClInclude Include="IdleState.h" />
     <ClInclude Include="InputForce.h" />
     <ClInclude Include="KeyboardBehaviour.h" />
+    <ClInclude Include="MoveToForce.h" />
     <ClInclude Include="node.h" />
     <ClInclude Include="NodeEdge.h" />
     <ClInclude Include="objectList.h" />

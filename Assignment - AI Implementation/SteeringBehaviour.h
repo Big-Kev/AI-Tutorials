@@ -14,6 +14,8 @@ public:
 
 	void setSteeringForce(SteeringForce* sf) { steeringForce = sf; }
 	void addSteeringForce(SteeringForce* sf) { steeringForces.push_back(sf); }
+
+	
 protected:
 	SteeringForce* steeringForce;
 	std::vector<SteeringForce*> steeringForces;

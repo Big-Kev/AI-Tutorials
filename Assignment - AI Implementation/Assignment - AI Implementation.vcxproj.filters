@@ -138,6 +138,9 @@
     <ClCompile Include="DecelerateForce.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MoveToForce.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Assignment___AI_ImplementationApp.h">
@@ -228,6 +231,9 @@
       <Filter>Header Files\Forces</Filter>
     </ClInclude>
     <ClInclude Include="DecelerateForce.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveToForce.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

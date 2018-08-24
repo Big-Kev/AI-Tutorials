@@ -46,6 +46,8 @@ protected:
 	Vector2 m_velocity;
 	Vector2 m_acceleration;
 	float m_force;
+	int framesSinceX;
+	int framesSinceY;
 	float m_mass;
 	float m_maxVelocity;
 	float m_maxForce;

@@ -18,6 +18,5 @@ eBehaviourResult SteeringBehaviour::execute(GameObject * gameObject, float delta
 		Vector2 v = steeringForce->getForce(gameObject);
 		gameObject->addForce(v);
 	}
-
 	return eBehaviourResult::SUCCESS;
 }

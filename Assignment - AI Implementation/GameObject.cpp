@@ -6,6 +6,8 @@
 GameObject::GameObject()
 {
 	m_mass = 1;
+	framesSinceX = 0;
+	framesSinceY = 0;
 }
 
 
@@ -22,7 +24,7 @@ void GameObject::addForce(Vector2 dir, float f, float deltaTime)
 
 void GameObject::addForce(Vector2 dir)
 {
-	m_acceleration = dir;
+	m_acceleration = m_acceleration + dir;
 }
 
 void GameObject::decelerate(float d)
@@ -41,6 +43,9 @@ void GameObject::update(float deltaTime)
 	for (Behaviour* b : m_behaviours) {
 		b->execute(this, deltaTime);
 	}
+	if (m_acceleration.x == 0) { m_velocity.x *= (0.1f * framesSinceX); framesSinceX++;}else{framesSinceX = 0;}
+	if (m_acceleration.y == 0) { m_velocity.y *= (0.1f * framesSinceY); framesSinceY++;}else{framesSinceY = 0;}
+	
 
 	m_velocity = m_velocity + m_acceleration;
 	
