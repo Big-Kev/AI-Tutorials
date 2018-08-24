@@ -10,6 +10,8 @@
 #include <vector>
 #include "SteeringBehaviour.h"
 #include "InputForce.h"
+#include "MoveToForce.h"
+
 class Assignment___AI_ImplementationApp : public aie::Application {
 public:
 
@@ -23,29 +25,30 @@ public:
 	virtual void draw();
 
 protected:
-	Bitmap b;
-	objectList o;
+	Bitmap				b;
+	objectList			o;
 
 	aie::Renderer2D*	m_2dRenderer;
 	aie::Font*			m_font;
 
-	Vector2 pos;
-	graph graphMap;
-	AStarSearch pathing1;
-	Path p1;
+	Vector2				pos;
+	graph				graphMap;
+	AStarSearch			pathing1;
+	Path				p1;
 	std::vector<Vector2> prevNodes;
-	PathBehaviour aStarTest;
+	PathBehaviour		aStarTest;
 
 	GameObject			m_player;
-	SteeringBehaviour	m_playerBehaviour;
-	InputForce m_playerSteering;
+	SteeringBehaviour	m_playerMovementBehaviour;
+	MoveToForce			m_playerSteering;
+
 
 	GameObject			m_enemy;
 	//SeekForce			m_seekPlayerBehaviour;
 	//FleeForce			m_fleePlayerBehaviour;
-	//PursueForce			m_pursuePlayerBehaviour;
-	//WanderForce			m_wanderEnemyBehaviour;
-	PathBehaviour m_pathEnemyBehaviour;
+	//PursueForce		m_pursuePlayerBehaviour;
+	//WanderForce		m_wanderEnemyBehaviour;
+	PathBehaviour		m_pathEnemyBehaviour;
 
 	Vector2				m_playerImage;
 	Vector2				m_enemyImage;
