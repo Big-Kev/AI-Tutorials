@@ -41,7 +41,7 @@ protected:
 	GameObject			m_player;
 	SteeringBehaviour	m_playerMovementBehaviour;
 	MoveToForce			m_playerSteering;
-
+	InputForce			m_playerKeyboard;
 
 	GameObject			m_enemy;
 	//SeekForce			m_seekPlayerBehaviour;

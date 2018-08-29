@@ -26,7 +26,7 @@ public:
 	void getMass(float& m) const { m = m_mass; }
 	void getSpeed(float& s) const { s = m_maxVelocity; }
 	void setSpeed(float s){ m_maxVelocity = s; }
-
+	bool isIdle();
 	void getForce(Vector2& m_vec) { m_vec = m_acceleration;  }
 	
 	//update physics
@@ -36,7 +36,7 @@ public:
 
 	//add behavoiur
 	void addBehaviour(Behaviour* behaviour);
-
+	void removeBehaviour();
 	//update game object and execute behaviours
 	virtual void update(float deltaTime);
 	

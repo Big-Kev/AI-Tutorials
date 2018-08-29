@@ -15,6 +15,12 @@ GameObject::~GameObject()
 {
 }
 
+bool GameObject::isIdle()
+{
+	return m_behaviours.empty();
+	
+}
+
 void GameObject::addForce(Vector2 dir, float f, float deltaTime)
 {
 	dir.normalise();
@@ -37,18 +43,27 @@ void GameObject::addBehaviour(Behaviour * behaviour)
 	m_behaviours.push_back(behaviour);
 }
 
+void GameObject::removeBehaviour()
+{
+	if (m_behaviours.size() > 0) {
+		m_behaviours.erase(m_behaviours.begin());
+	}
+}
+
 void GameObject::update(float deltaTime)
 {
 
 	for (Behaviour* b : m_behaviours) {
 		b->execute(this, deltaTime);
 	}
-	if (m_acceleration.x == 0) { m_velocity.x *= (0.1f * framesSinceX); framesSinceX++;}else{framesSinceX = 0;}
-	if (m_acceleration.y == 0) { m_velocity.y *= (0.1f * framesSinceY); framesSinceY++;}else{framesSinceY = 0;}
-	
+	if (m_acceleration.x == 0) { m_velocity.x *= (0.1f * framesSinceX); framesSinceX++; }
+	else { framesSinceX = 0; }
+	if (m_acceleration.y == 0) { m_velocity.y *= (0.1f * framesSinceY); framesSinceY++; }
+	else { framesSinceY = 0; }
+
 
 	m_velocity = m_velocity + m_acceleration;
-	
+
 	if (m_velocity.x != 0 || m_velocity.y != 0) {
 		if (m_velocity.magnitude() > m_maxVelocity) {
 			m_velocity.normalise();
