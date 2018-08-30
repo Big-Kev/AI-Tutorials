@@ -36,7 +36,9 @@ protected:
 	AStarSearch			pathing1;
 	Path				p1;
 	std::vector<Vector2> prevNodes;
-	PathBehaviour		aStarTest;
+	
+
+	
 
 	GameObject			m_player;
 	SteeringBehaviour	m_playerMovementBehaviour;

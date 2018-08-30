@@ -5,6 +5,7 @@
 
 PathBehaviour::PathBehaviour()
 {
+	m_speed = 1;
 }
 
 
@@ -17,11 +18,14 @@ eBehaviourResult PathBehaviour::execute(GameObject * gameObject, float deltaTime
 	Vector2 m_pos;
 	gameObject->getPosition(m_pos);
 	if (m_path.empty() == false) {//checking if path is not empty
-		if (m_pos.pythag(m_path.top()) > m_speed * 2) {//checking if next node is within one frames movment of gameObject
+		m_path.pop();
+
+		if (m_pos.pythag(m_path.top()) > 25) {//checking if next node is within one frames movment of gameObject
 			Vector2 target_dir = m_path.top() - m_pos;
 			target_dir.normalise();
-			target_dir = target_dir * m_speed;
+			//target_dir = target_dir * m_speed;
 			gameObject->translate(target_dir);
+			
 		}
 		else {
 			//Vector2 target_dir = m_path.top() - m_pos;
@@ -29,8 +33,7 @@ eBehaviourResult PathBehaviour::execute(GameObject * gameObject, float deltaTime
 			//target_dir = target_dir * m_pos.pythag(m_path.top()) * 0.5;
 			//gameObject->translate(target_dir);
 			//if (m_pos.pythag(m_path.top()) < 2) {
-			gameObject->setPosition(m_path.top());
-			m_path.pop();
+			//gameObject->setPosition(m_path.top());
 
 			//}
 		}

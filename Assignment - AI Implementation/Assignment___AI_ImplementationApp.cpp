@@ -27,17 +27,17 @@ bool Assignment___AI_ImplementationApp::startup() {
 	m_player.setPosition(Vector2(810, 200));
 	m_player.addBehaviour(&m_playerMovementBehaviour);
 	m_playerMovementBehaviour.setSteeringForce(&m_playerKeyboard);
-	//m_playerSteering.setSpeed(0);
-	aStarTest.setPath(p1);
-
 	m_player.addBehaviour(&m_playerMovementBehaviour);
-	m_playerMovementBehaviour.addSteeringForce(&m_playerKeyboard);
-	m_enemy.setPosition(Vector2(100, 350));
 	m_player.setSpeed(5);
-
-	m_enemy.setSpeed(10);
 	m_player.getPosition(m_playerImage);
+
+
+
+	m_enemy.setPosition(Vector2(150, 350));
+	m_enemy.addBehaviour(&m_pathEnemyBehaviour);
+	m_enemy.setSpeed(1);
 	m_enemy.getPosition(m_enemyImage);
+
 	return true;
 }
 
@@ -53,12 +53,14 @@ void Assignment___AI_ImplementationApp::update(float deltaTime) {
 	aie::Input* input = aie::Input::getInstance();
 	m_playerKeyboard.getInput(input);
 
-	if (m_playerImage.pythag(m_enemyImage) < 300 * 300 && m_enemy.isIdle()) {
+	if (m_playerImage.pythag(m_enemyImage) < 300 * 300) {
+		if (m_enemy.isIdle()) {
+			m_enemy.addBehaviour(&m_pathEnemyBehaviour);
+		}
 		p1 = pathing1.aStareSearch(graphMap.getClosestNodePointer(m_enemyImage.x, m_enemyImage.y), graphMap.getClosestNodePointer(m_playerImage.x, m_playerImage.y));
-		
 		m_pathEnemyBehaviour.setPath(p1);
-	}
-	else if(m_playerImage.pythag(m_enemyImage) >= 300 * 300){
+
+	}else{
 		m_enemy.removeBehaviour();
 	}
 
@@ -85,6 +87,18 @@ void Assignment___AI_ImplementationApp::draw() {
 	m_2dRenderer->setRenderColour(1, 0, 0);
 	m_2dRenderer->drawCircle(m_enemyImage.x, m_enemyImage.y, 10);
 
+	std::stack<Vector2>  t;
+	t = p1.path;
+	for (int i = 0; i < p1.path.size(); i++) {
+		m_2dRenderer->setRenderColour(0, 0, 1);
+		m_2dRenderer->drawCircle(t.top().x, t.top().y, 10);
+		t.pop();
+	}
+
+
+	std::cout << m_enemyImage.x << ", " << m_enemyImage.y << std::endl;
+	graphMap.getClosestNodes(m_playerImage.x, m_playerImage.y, m_2dRenderer);
+	graphMap.getClosestNodes(m_enemyImage.x, m_enemyImage.y, m_2dRenderer);
 	m_player.getPosition(m_playerImage);
 	m_2dRenderer->setRenderColour(0, 1, 0);
 	m_2dRenderer->drawCircle(m_playerImage.x, m_playerImage.y, 10);
