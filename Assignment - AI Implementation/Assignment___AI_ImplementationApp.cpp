@@ -60,7 +60,8 @@ void Assignment___AI_ImplementationApp::update(float deltaTime) {
 		p1 = pathing1.aStareSearch(graphMap.getClosestNodePointer(m_enemyImage.x, m_enemyImage.y), graphMap.getClosestNodePointer(m_playerImage.x, m_playerImage.y));
 		m_pathEnemyBehaviour.setPath(p1);
 
-	}else{
+	}
+	if(p1.path.empty()){
 		m_enemy.removeBehaviour();
 	}
 
@@ -86,13 +87,17 @@ void Assignment___AI_ImplementationApp::draw() {
 	m_enemy.getPosition(m_enemyImage);
 	m_2dRenderer->setRenderColour(1, 0, 0);
 	m_2dRenderer->drawCircle(m_enemyImage.x, m_enemyImage.y, 10);
+	m_2dRenderer->setRenderColour(1, 0, 0, 0.2f);
+	m_2dRenderer->drawCircle(m_enemyImage.x, m_enemyImage.y, 300);
 
 	std::stack<Vector2>  t;
 	t = p1.path;
 	for (int i = 0; i < p1.path.size(); i++) {
 		m_2dRenderer->setRenderColour(0, 0, 1);
-		m_2dRenderer->drawCircle(t.top().x, t.top().y, 10);
-		t.pop();
+		if (t.empty() == false) {
+			m_2dRenderer->drawCircle(t.top().x, t.top().y, 10);
+			t.pop();
+		}
 	}
 
 

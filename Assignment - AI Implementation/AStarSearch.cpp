@@ -66,5 +66,8 @@ Path AStarSearch::aStareSearch(node * startNode, node * endNode)
 		p.path.push(currentNode->getPos());
 		currentNode = currentNode->parent;
 	}
+	if (p.path.empty()) {
+		p.path.push(startNode->getPos());
+	}
 	return p;
 }

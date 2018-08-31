@@ -12,7 +12,7 @@ Tutorial___Pathfinding_2App::~Tutorial___Pathfinding_2App() {
 }
 
 bool Tutorial___Pathfinding_2App::startup() {
-	
+
 	m_2dRenderer = new aie::Renderer2D();
 
 	// TODO: remember to change this when redistributing a build!
@@ -37,9 +37,11 @@ void Tutorial___Pathfinding_2App::update(float deltaTime) {
 	// input example
 	aie::Input* input = aie::Input::getInstance();
 	if (input->wasKeyPressed(aie::INPUT_KEY_SPACE)) {
-		pos = p1.path.top();
-		prevNodes.push_back(p1.path.top());
-		p1.path.pop();
+		if (p1.path.empty() == false) {
+			pos = p1.path.top();
+			prevNodes.push_back(p1.path.top());
+			p1.path.pop();
+		}
 	}
 	// exit the application
 	if (input->isKeyDown(aie::INPUT_KEY_ESCAPE))
