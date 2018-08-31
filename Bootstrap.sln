@@ -32,6 +32,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tutorial - Pathfinding 2", "Tutorial - Pathfinding 2\Tutorial - Pathfinding 2.vcxproj", "{65DF8BAE-31D9-4120-A47E-7F30A0EE3459}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assignment - AI Implementation", "Assignment - AI Implementation\Assignment - AI Implementation.vcxproj", "{38F6C5D5-DB29-4FD4-94DE-BDCEFDFDA443}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AF59BB0B-E059-4773-83DC-728A949647DA} = {AF59BB0B-E059-4773-83DC-728A949647DA}
+		{899DF1EF-E313-4D2D-B191-6AA87554D2A0} = {899DF1EF-E313-4D2D-B191-6AA87554D2A0}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
