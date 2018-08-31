@@ -11,7 +11,7 @@
 #include "SteeringBehaviour.h"
 #include "InputForce.h"
 #include "MoveToForce.h"
-
+#include "PursueForce.h"
 class Assignment___AI_ImplementationApp : public aie::Application {
 public:
 
@@ -42,16 +42,21 @@ protected:
 
 	GameObject			m_player;
 	SteeringBehaviour	m_playerMovementBehaviour;
+	SteeringBehaviour	m_enemyMovementBehaviour;
 	MoveToForce			m_playerSteering;
 	InputForce			m_playerKeyboard;
 
 	GameObject			m_enemy;
 	//SeekForce			m_seekPlayerBehaviour;
 	//FleeForce			m_fleePlayerBehaviour;
-	//PursueForce		m_pursuePlayerBehaviour;
+	PursueForce			m_pursuePlayerForce;
 	//WanderForce		m_wanderEnemyBehaviour;
 	PathBehaviour		m_pathEnemyBehaviour;
 
 	Vector2				m_playerImage;
 	Vector2				m_enemyImage;
+	
+	std::string			text;
+	const char			*c;
+	
 };
